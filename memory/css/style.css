@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background-size: 120%;
+  text-align: center;
+}
+
+header {
+  color: whitesmoke;
+  letter-spacing: 0.4em;
+  font-size: 22px;
+  padding: 30px;
+}
+
+section {
+  background: whitesmoke;
+  width: 250px;
+  height: 310px;
+  margin: auto;
+  box-shadow: #333 3px 3px 3px 1px;
+}
+
+.box {
+  background: #27ae60;
+  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background-size: 250%;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 10px 0 0 10px;
+  cursor: pointer;
+}
+.play:hover {
+  background: #2ecc71;
+  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background-size: 100%;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+#state {
+  background: #27ae60;
+  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background-size: 250%;
+  width: 250px;
+  margin: auto;
+  padding: 0 10px;
+  color: whitesmoke;
+  border: whitesmoke solid;
+  border-width: 0 10px 10px 10px;
+  font-size: 16px;
+  text-align: right;
+  box-shadow: #333 3px 3px 3px 1px;
+}
+#time {
+  float: left;
+}
+#score {
+  
+}
+
+footer p {
+  color: whitesmoke;
+  margin: 20px;
+}
+
+footer p a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: whitesmoke;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+#pre {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+#themes {
+  width: 280px;
+  margin: 140px auto 0;
+  padding: 20px;
+  background: whitesmoke;
+  color: #36a7a2;
+  font-weight: bold;
+  letter-spacing: .05em;
+  border-radius: 2px;
+}
+
+#themes p {
+  margin: 10px auto;
+  padding: 5px;
+  border: solid #36a7a2 1px;
+  border-radius: 2px;
+  background: whitesmoke;
+  color: #36a7a2;
+  cursor: pointer;
+  font-weight: normal;
+}
+#themes p:hover {
+  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background-size: 250%;
+  color: whitesmoke;
+}
+
+#modal {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+#modal > div {
+  width: 300px;
+  margin: 180px auto 0;
+  padding: 20px 0 40px;
+  background: whitesmoke;
+  color: #36a7a2;
+  border-radius: 2px;
+}
+
+#modal p:first-child, #modal #final {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+#again a {
+  color: #36a7a2;
+  text-decoration: none;
+  margin: auto;
+  padding: 10px 20px;
+  width: 160px;
+  border: solid #36a7a2 1px;
+  border-radius: 2px;
+}
+#again a:hover {
+  background: #27ae60;
+  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background-size: 250%;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    font-size: 28px;
+  }
+  
+  section {
+    width: 310px;
+    height: 250px;
+  }
+  
+  .box {
+  }
+  
+  #state {
+    width: 310px;
+    border-width: 0 10px 10px 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    font-size: 32px;
+    padding: 10px;
+  }
+  
+  section {
+    width: 440px;
+    height: 355px;
+  }
+  
+  .box {
+    width: 70px;
+    height: 70px;
+    margin: 15px 0 0 15px;
+  }
+  
+  #state {
+    width: 440px;
+    border-width: 0 15px 15px 15px;
+    font-size: 20px;
+  }
+}
