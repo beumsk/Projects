@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Wiki viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <header class="container-fluid bg-primary">
+  <h1 class="text-center">WIKI VIEWER</h1>
+</header>
+
+<section class="container text-center">
+  <!--link to a random wiki page-->
+  <a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random"><p class="lead btn btn-default btn-block btn-lg">Take me to a random wiki page</p></a><br>
+  
+  <!--form to search and get wikipedia links related-->
+  <form class="input-group" method="">
+    <input id="wiki" type="text" class="form-control input-lg" placeholder="Your wiki search">
+    <span id="search" class="input-group-addon btn"><div class=""><i class="glyphicon glyphicon-search"></i></div></span>
+  </form>
+</section>
+
+<footer class="text-center">
+  <p class="text-center">Made by <a href="http://remybeumier.be" target="_blank">Remy Beumier</a> with <a href="https://www.mediawiki.org/wiki/API:Main_page">wiki API</a></p>
+</footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

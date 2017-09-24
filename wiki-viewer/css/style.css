@@ -1,0 +1,36 @@
+body {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/a/a7/Wikipedia_logo_v3.svg') no-repeat top fixed;
+  background-size: 60%;
+  background-position: 50% -10%;
+}
+
+header {
+}
+
+section {
+  margin-top: 6vh;
+}
+
+form {
+  margin-bottom: 6vh;
+}
+
+footer {
+  margin-top: 6vh;
+  text-shadow: 0 0 4px whitesmoke;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.well {
+  background: rgba(256, 256, 256, 0.8);
+}
+.well:hover {
+  border: solid 1px ;
+}
+
+hr {
+  border-top: solid 1px #337AB7;
+}
