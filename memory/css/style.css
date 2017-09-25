@@ -6,9 +6,9 @@
 }
 
 body {
-  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
-  background-size: 120%;
   text-align: center;
+  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background-attachment: fixed;
 }
 
 header {
