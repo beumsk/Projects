@@ -1,0 +1,68 @@
+* {
+}
+
+body {
+  font-family: arial;
+  background: #673AB7;
+  background: linear-gradient(to top left, #34495e, #9b59b6);
+  background-size: 140%;
+  color: whitesmoke;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+fieldset {
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  padding: 0 20px 20px;
+  border-radius: 2px;
+}
+
+select, input, button {
+  margin: 10px;
+  padding: 2px 5px;
+  border: none;
+  background: whitesmoke;
+  color: #333;
+  font-size: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 1s ease, color 1s ease;
+}
+
+button:hover {
+  background: #333;
+  color: whitesmoke;
+}
+
+#sinceX {
+  
+}
+
+#dayX {
+  
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+  fieldset {
+    margin: 40px 100px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 48px;
+  }
+  fieldset {
+    margin: 50px 160px;
+  }
+}
