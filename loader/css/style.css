@@ -1,0 +1,130 @@
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFECB3;
+  background: linear-gradient(to top left, #f39c12, #FFECB3);
+  min-height: 100vh;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.main {
+  text-align: center;
+}
+
+#load {
+  padding-top: 5vh;
+  color: #2C3E50;
+}
+#load:before {
+  content: "";
+  animation: dots 5s linear infinite;
+  -webkit-animation: dots 5s linear infinite;
+}
+
+.main img {
+  min-width: 200px;
+  width: 30vw;
+  margin-top: 15vh;
+  border-radius: 50%;
+	animation: loader 5s infinite linear;
+	-webkit-animation: loader 5s infinite linear;
+}
+@media only screen and (min-width: 768px) {
+  .main img {
+/*     width: 300px; */
+    margin-top: 10vh;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main img {
+/*     width: 400px; */
+    margin-top: 0;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  background: rgba(256, 256, 256, 0.3);
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+a {
+  color: #34495E;
+  text-decoration: none;
+}
+a:hover {
+  color: #333;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes dots {
+	10% {
+		content: "L";
+	}
+  20% {
+    content: "Lo";
+  }
+	30% {
+    content: "Loa";
+	}
+  40% {
+		content: "Load";
+	}
+  50% {
+    content: "Loadi";
+  }
+	60% {
+    content: "Loadin";
+	}
+  70% {
+    content: "Loading";
+	}
+}
+@-webkit-keyframes dots {
+	10% {
+		content: "L";
+	}
+  20% {
+    content: "Lo";
+  }
+	30% {
+    content: "Loa";
+	}
+  40% {
+		content: "Load";
+	}
+  50% {
+    content: "Loadi";
+  }
+	60% {
+    content: "Loadin";
+	}
+  70% {
+    content: "Loading";
+	}
+}
