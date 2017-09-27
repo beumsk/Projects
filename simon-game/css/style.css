@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: whitesmoke;
+  background: linear-gradient(to top left, #bdc3c7, whitesmoke);
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+header {
+  color: #9b59b6;
+  padding-top: 20px;
+  letter-spacing: 0.4em;
+}
+
+section {
+  height: 400px;
+  width: 400px;
+  margin: 20px auto;
+  padding-top: 10px;
+  border-radius: 100%;
+}
+
+#center {
+  height: 190px;
+  width: 190px;
+  background: #9b59b6;
+  position: relative;
+  margin: auto;
+  bottom: 285px;
+  border-radius: 100%;
+  border: 8px solid #E2E4E6;
+}
+
+input {
+  width: 60px;
+  font-size: 25px;
+  text-align: center;
+  margin: 20px auto 10px;
+  border-radius: 5px;
+  border: none;
+  border: solid 2px #333;
+}
+
+#start, #strict {
+  width: 60px;
+  margin: 10px auto;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+}
+.unclicked {
+  background: #333;
+  color: whitesmoke;
+}
+.start-strict {
+  background: whitesmoke;
+  color: #333;
+}
+
+#on-off {
+  margin: 10px auto;
+}
+.da {
+  background: #333;
+  display: inline;
+  height: 20px;
+}
+#on {
+  border-radius: 5px 0 0 5px;
+}
+.on {
+  background: #388E3C;
+}
+#off {
+  border-radius: 0 5px 5px 0;
+}
+.off {
+  background: #D32F2F;
+}
+#on, #off {
+  width: 40px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.active {
+  background: whitesmoke;
+  color: #333;
+}
+
+.colors {
+  height: 180px;
+  width: 180px;
+  margin: 2px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+#green {
+  background: #27ae60;
+  border-radius: 100% 0 0 0;
+}
+
+#red {
+  background: #c0392b;
+  border-radius: 0 100% 0 0;
+}
+
+#yellow {
+  background: #f39c12;
+  border-radius: 0 0 0 100%;
+}
+
+#blue {
+  background: #2980b9;
+  border-radius: 0 0 100% 0;
+}
+
+footer {
+  color: #9b59b6;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #9b59b6;
+}
+
+@media only screen and (min-width:1440px) {
+  section {
+    height: 600px;
+    width: 600px;
+  }
+  
+  #center {
+    height: 290px;
+    width: 290px;
+    bottom: 435px;
+  }
+  
+  input {
+    width: 80px;
+    font-size: 32px;
+    margin-top: 30px;
+  }
+  
+  #start, #strict {
+    margin: 30px auto;
+    padding: 10px 20px;
+    width: 80px;
+  }
+  
+  #on, #off {
+    width: 60px;
+    margin-top: 30px;
+    padding: 10px 25px;
+  }
+  
+  .colors {
+    height: 280px;
+    width: 280px;
+  }
+}
