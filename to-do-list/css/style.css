@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  background: #2c3e50;
+  background-size: 250%;
+}
+
+#top {
+  margin: 20px auto 0;
+  padding: 20px;
+  background: #e74c3c;
+  width: 368px;
+  text-align: center;
+  border-bottom: solid 1px rgba(0, 0, 0, .5);
+  border-radius: 2.5px 2.5px 0 0;
+/*   box-shadow: 3px 3px 1px 0px; */
+}
+
+h1 {
+  padding: 10px;
+  color: #ecf0f1;
+  font-size: 32px;
+  letter-spacing: 0.2em;
+  text-shadow: 1px 1px #333;
+}
+
+button, input {
+  height: 30px;
+  padding: 0 10px;
+  background: #ecf0f1;
+  border: none;
+  color: #2c3e50;
+  border-radius: 2.5px;
+/*   box-shadow: 2px 2px 1px 0px #333; */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: color 1s ease, background 1s ease;
+}
+button:hover {
+  color: #ecf0f1;
+  background: #2c3e50;
+}
+
+#bottom {
+  width: 368px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  background: #ecf0f1;
+  border-radius: 0 0 2.5px 2.5px;
+/*   box-shadow: 3px 3px 1px 0px; */
+}
+
+.elt {
+  margin: 10px 0;
+  padding: 5px 10px;
+  background: #e74c3c;
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 2px;
+  display: none;
+/*   box-shadow: 2px 2px 1px 0px #333; */
+}
+.crossed {
+  text-decoration: line-through;
+  background: darkgrey;
+}
+
+span {
+  display: box;
+  position: relative;
+  margin: -5px -10px;
+  padding: 5px 10px;
+  float: right;
+  cursor: pointer;
+  border-radius: 0 2.5px 2.5px 0;
+  transition: background 1s ease;
+}
+span:hover {
+  background: #2c3e50;
+}
+
+footer {
+  margin: 0 auto 20px;
+  text-align: center;
+  color: #ecf0f1;
+}
+footer a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ecf0f1;
+}
+
+
+@media only screen and (min-width: 780px) {
+  #top {
+    margin-top: 50px;
+    width: 600px;
+    border-bottom: solid 1.5px rgba(0, 0, 0, .5);
+  }
+  
+  h1 {
+    font-size: 42px;
+  }
+  
+  button, input {
+    font-size: 18px;
+  }
+  
+  #bottom {
+    width: 600px;
+  }
+  
+  .elt {
+    padding: 7.5px 15px;
+    font-size: 18px;
+  }
+  
+  span {
+    margin: -7.5px -15px;
+    padding: 7.5px 15px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #top {
+    margin-top: 80px;
+    width: 900px;
+    border-bottom: solid 2px rgba(0, 0, 0, .5);
+  }
+  
+  h1 {
+    font-size: 52px;
+  }
+  
+  button, input {
+    font-size: 24px;
+  }
+  
+  #bottom {
+    width: 900px;
+  }
+  
+  .elt {
+    padding: 10px 20px;
+    font-size: 24px;
+  }
+  
+  span {
+    margin: -10px -20px;
+    padding: 10px 20px;
+  }
+}
