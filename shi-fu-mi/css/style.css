@@ -1,0 +1,42 @@
+body {
+  background-image: url('https://res.cloudinary.com/beumsk/image/upload/v1506069215/VqD95oT_qpf3np.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+}
+
+h1 {
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 3px white;
+}
+
+.well {
+  background: rgba(256, 256, 256, 0.8);
+}
+
+hr {
+  border-top: dashed 1px;
+}
+
+.gooo {
+  margin: 10px 30px;
+}  
+.gooo:hover {
+  cursor: pointer;
+  color: grey;
+}
+
+.btn {
+  font-weight: bold;
+}
+.btn:hover {
+  cursor: default;
+}
+
+#score {
+  font-weight: bold;
+}
+
+footer {
+  text-shadow: 0 0 3px white;
+}
