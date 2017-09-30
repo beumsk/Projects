@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('https://images3.alphacoders.com/273/thumb-1920-273289.jpg') no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+  background-attachment: fixed;
+  color: whitesmoke;
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+header {
+  margin: 30px auto;
+}
+
+#random {
+  width: 250px;  
+  opacity: .75;
+}
+#random:hover {
+  cursor: pointer;  
+  opacity: 1 !important;
+}
+
+@keyframes rotation {
+  100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes rotation {
+  100% {transform: rotate(360deg);}
+}
+.animated {
+  animation: rotation 1s linear;
+  -webkit-animation: rotation 1s linear;
+}
+
+#youtube-audio {
+  width: 60px;
+  margin: 20px auto;
+  color: #333;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#youtube-audio:hover {
+  color: #f5f5f5;
+}
+#youtube-icon {
+  display: none;
+}
+
+a {
+  color: #F44336;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    font-size: 18px;
+    margin: 30px auto;
+  }
+  
+  #random {
+    width: 300px;
+  }
+  
+  i {
+    transform: scale(1.5);
+    margin: 10px auto;
+  }
+  
+  footer {
+    font-size: 16px;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  header {
+    font-size: 24px;
+    margin: 50px auto;
+  }
+  
+  #random {
+    width: 400px;
+  }
+  
+  i {
+    transform: scale(2);
+    margin: 20px auto;
+  }
+  
+  footer {
+    font-size: 24px;
+    margin: 40px auto;
+  }
+}
