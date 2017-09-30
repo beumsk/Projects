@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+header {
+  padding-top: 20px;
+  color: whitesmoke;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+section {
+  background: #2c3e50;
+/*   height: 350px; */
+  width: 310px;
+  margin-left: calc(50% - 155px);
+  margin-top: 30px;
+  border-radius: 5px;
+  border: solid 5px whitesmoke;
+  box-shadow: #333 3px 3px 3px 1px;
+}
+
+div > div, #screen {
+  background: whitesmoke;
+  color: #2c3e50;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#screen {
+  width: 280px;
+  height: 45px;
+  margin: 10px;
+  text-align: right;
+  font-size: 40px;
+  color: #2c3e50;
+  cursor: default;
+  padding-right: 5px;
+}
+
+#buttons {
+  width: 280px;
+  margin: 10px;
+}
+
+.button {
+  display: inline-block;
+  transition: box-shadow 0.7s ease;
+  box-shadow: 3px 3px 3px 1px black;
+  color: #2c3e50;
+  margin: 4.98px;
+}
+.button:hover {
+  box-shadow: none;
+}
+
+.number, #clear, #comma {
+  width: 80px;
+  font-size: 20px;
+}
+.operator {
+  width: 127.5px;
+  font-size: 20px;
+}
+#equal {
+  width: 270px;
+  font-size: 40px;
+}
+
+footer {
+  margin-top: 5vh;
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+}
+a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+a:hover {
+  color: whitesmoke;
+}
+
+.background {
+  background-image: linear-gradient(to top left, #c0392b, #e74c3c , #9b59b6);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -100;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    font-size: 28px;
+  }
+}
