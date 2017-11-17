@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  background: #2ecc71;
+  background-image: linear-gradient(to top left, #16a085, #2ecc71);
+  background-attachment: fixed;
+}
+
+/* title */
+header {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 10px;
+  padding: 20px;
+  color: white;
+}
+
+/* main table */
+.snakeTable {
+  position: absolute;
+  left: calc(50% - 105px);
+  top: calc(50% - 105px);
+  width: 210px;
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .snakeTable {
+    width: 420px;
+    height: 420px;
+    left: calc(50% - 210px);
+    top: calc(50% - 210px);
+  }
+}
+
+/* all boxes in the table */
+.box {
+  background: white;
+  border: solid 1px #16a085;
+  width: 10px;
+  height: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .box {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.snake {
+  background: #16a085;
+}
+
+.food {
+  background: #8e44ad;
+}
+
+/* bar showing status below table */
+.status {
+  background: white;
+  color: #16a085;
+  border: solid 1px #16a085;
+  width: 210px;
+  height: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .status {
+    width: 420px;
+    height: 40px;
+  }
+}
+
+.score {
+  float: right;
+  padding: 0 5px;
+  line-height: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .score {
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* modular window before and after game */
+.modul {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.start {
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 130px);
+  background: rgba(256, 256, 256, 0.9);
+  width: 260px;
+  padding: 50px;
+}
+.start span {
+  color: #16a085;
+  border: 1px solid;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.start span:hover {
+  background: #16a085;
+  color: white;
+}
+
