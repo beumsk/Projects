@@ -1,20 +1,27 @@
 
+var $random = $("#random"),
+    $youtubeAudio = $("#youtube-audio"),
+    $youtubeAudioI = $("#youtube-audio i");
 
 // randomly chose one of the 151 first gen pokemon
 $(document).ready(function() {
-  $('#random').click(function() {
-    $("#random").attr("src", "http://www.pokepedia.fr/images/thumb/d/d6/Pok%C3%A9_ball_artwork.png/200px-Pok%C3%A9_ball_artwork.png");
+  $random.click(function() {
+    // always reset pokeball as image
+    $random.attr("src", "http://www.pokepedia.fr/images/thumb/d/d6/Pok%C3%A9_ball_artwork.png/200px-Pok%C3%A9_ball_artwork.png").css("padding","0");
     
-    $("#random").addClass("animated");
+    // start animation
+    $random.addClass("animated");
     setTimeout( function () {
-      $("#random").attr('src', pokemons[Math.floor(Math.random() * pokemons.length)]);
-      $("#random").removeClass("animated");
-      $("#random").fadeTo(0, 0.2).fadeTo(1000, .75);
+      // replace image with one random pokemon after the animation (1s length)
+      $random.attr('src', pokemons[Math.floor(Math.random() * pokemons.length)]);
+      $random.removeClass("animated").css("padding", "10px");
+      $random.fadeTo(0, 0.2).fadeTo(1000, 1);
     }, 1000);
   });
   
-  $('#youtube-audio').on('click', function() {
-    $('#youtube-audio i').toggleClass('fa-volume-up fa-volume-off')
+  // change youtube audio icon on play
+  $youtubeAudio.on('click', function() {
+    $youtubeAudioI.toggleClass('fa-volume-up fa-volume-off')
   });
 });
 
