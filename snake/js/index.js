@@ -4,14 +4,13 @@
 
 var snakeTable = document.getElementsByClassName("snakeTable")[0],
     boxes = document.getElementsByClassName("box"),
-    food = document.getElementsByClassName("food")[0],
     modul = document.getElementsByClassName("modul")[0],
     start = document.getElementsByClassName("start")[0];
 
 var table = {
   rowsCols: 21,
   boxes: 21*21
-}
+};
 
 var snake = {
   direction: "right",
@@ -95,10 +94,7 @@ function move() {
 function hitBorder() {
   let headPos = snake.position.length-1;
   // goes of limits
-  if (    ((snake.position[headPos][0] === table.rowsCols-1) && (snake.direction === "right"))
-      ||  ((snake.position[headPos][0] === 0)                && (snake.direction === "left"))
-      ||  ((snake.position[headPos][1] === table.rowsCols-1) && (snake.direction === "down"))
-      ||  ((snake.position[headPos][1] === 0)                && (snake.direction === "up"))   ) {
+  if (((snake.position[headPos][0] === table.rowsCols-1) && (snake.direction === "right")) || ((snake.position[headPos][0] === 0) && (snake.direction === "left")) || ((snake.position[headPos][1] === table.rowsCols-1) && (snake.direction === "down")) ||  ((snake.position[headPos][1] === 0) && (snake.direction === "up"))) {
     console.log("border hit");
     stopp();
   }
@@ -195,7 +191,7 @@ document.addEventListener("keydown", function(e) {
       case 38:
         if (snake.direction === "down") return;
         snake.direction = "up";
-        break
+        break;
       // right
       case 39:
         if (snake.direction === "left") return;
