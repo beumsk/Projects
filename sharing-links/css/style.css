@@ -7,17 +7,18 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #95a5a6;
+  background: url(https://res.cloudinary.com/beumsk/image/upload/v1506066750/link.png);
+  background-size: 50px;
+  background-repeat: space;
 }
 
-#back {
-  position: absolute;
-  z-index: -10;
-  text-align: center;
+.back {
+  background: rgba(256, 256, 256, 0.9);
+  background-attachment: fixed;
+  position: fixed;
   width: 100%;
-}
-#back img {
-  width: 200px;
-  margin-top: calc(50vh - 100px);
+  height: 100%;
+  z-index: -10;
 }
 
 h1 {
@@ -37,18 +38,28 @@ span {
 
 #inp {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 input {
   margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
   height: 30px;
+  border-radius: 2px;
+  border: 1px solid grey;
 }
-[type="submit"]{
+
+[type="submit"] {
   padding: 0 10px;
+  color: white;
+  background: #333;
 }
+
 [type="submit"]:hover {
   cursor: pointer;
+  background: white;
+  color: #333;
 }
 
 #content {
@@ -60,15 +71,19 @@ input {
   letter-spacing: 0.2em; 
 }
 
+#content a:hover {
+  text-decoration: underline !important;
+}
+
 .link {
-  background: rgba(256, 256, 256, 0.7);
+  background: rgba(0, 0, 0, 0.1);
   padding: 10px;
   width: 80%;
   margin: 10px auto;
   border-radius: 2px;
 }
 .link:hover {
-  background: rgba(256, 256, 256, 0.9)
+/*   background: rgba(256, 256, 256, 0.9); */
 }
 
 .info {
@@ -82,15 +97,18 @@ input {
 }
 
 footer {
-  margin-top: 20px;
-  padding-bottom: 10px;
+  width: 80%;
+  margin: 30px auto;
+  padding: 10px;
   text-align: center;
-  color: whitesmoke;
+  color: grey;
+/*   background: rgba(256, 256, 256, 0.8); */
 }
 footer a {
   color: #2C3E50;
   text-decoration: none;
 }
 footer a:hover {
-  color: #f5f5f5;
+  color: grey;
+  text-decoration: underline;
 }
