@@ -1,12 +1,12 @@
 
-var date = new Date();
-var hour = date.getHours();
-var min = date.getMinutes();
-var sec = date.getSeconds();
-var hourElt = document.getElementsByClassName("hour")[0];
-var minElt = document.getElementsByClassName("min")[0];
-var secElt = document.getElementsByClassName("sec")[0];
-var digit = document.getElementsByClassName("digit")[0];
+var date = new Date(),
+    hour = date.getHours(),
+    min = date.getMinutes(),
+    sec = date.getSeconds(),
+    hourElt = document.getElementsByClassName("hour")[0],
+    minElt = document.getElementsByClassName("min")[0],
+    secElt = document.getElementsByClassName("sec")[0],
+    digit = document.getElementsByClassName("digit")[0];
 
 moveTime();
 
@@ -32,19 +32,22 @@ function moveMin() {
   var turnMin = min*6;
   minElt.style.transform = "rotate(" + turnMin + "deg)";
   minElt.style.webkitTransform = "rotate(" + turnMin + "deg)";
-  digit.innerHTML = date.getHours() + ":" + date.getMinutes();
+  // display digit on hover; short condition to keep 00:00 format
+  digit.innerHTML = (new Date().getHours()<10?'0':'') + date.getHours() + ":" + (new Date().getMinutes()<10?'0':'') + date.getMinutes();
   // after first min leftovers
   setTimeout(function () {
     turnMin += 6;
     minElt.style.transform = "rotate(" + turnMin + "deg)";
     minElt.style.webkitTransform = "rotate(" + turnMin + "deg)";
-    digit.innerHTML = new Date().getHours() + ":" + new Date().getMinutes();
+    // display digit on hover; short condition to keep 00:00 format
+    digit.innerHTML = (new Date().getHours()<10?'0':'') + new Date().getHours() + ":" + (new Date().getMinutes()<10?'0':'') + new Date().getMinutes();
     // for each min after first
     var eachMin = setInterval(function () {
       turnMin += 6;
       minElt.style.transform = "rotate(" + turnMin + "deg)";
       minElt.style.webkitTransform = "rotate(" + turnMin + "deg)";
-      digit.innerHTML = new Date().getHours() + ":" + new Date().getMinutes();
+      // display digit on hover; short condition to keep 00:00 format
+      digit.innerHTML = (new Date().getHours()<10?'0':'') + new Date().getHours() + ":" + (new Date().getMinutes()<10?'0':'') + new Date().getMinutes();
     }, 60000);
   }, (60 - sec) * 1000);
 }

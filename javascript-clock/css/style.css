@@ -5,7 +5,11 @@
 }
 
 body {
+/*   min-height: 100vh; */
   text-align: center;
+  background: #9b59b6;
+  background: linear-gradient(to top left, #9b59b6, #f39c12);
+/*   background-attachment: fixed; */
 }
 
 .title {
@@ -13,8 +17,8 @@ body {
   top: 0;
   font: 36px Arial;
   letter-spacing: 0.1em;
-  width: 80vw;
-  margin: 6vh 10vw;
+  width: 100vw;
+  padding: 6vh 10vw;
   color: rgba(256, 256, 256, 0.5);
 }
 @media only screen and (min-width: 768px) {
@@ -154,12 +158,10 @@ footer a {
 }
 footer a:hover {
   color: rgba(256, 256, 256, 0.5);
+  text-decoration: underline;
 }
 
 .background {
-  background: #9b59b6;
-  background: linear-gradient(to top left, #9b59b6, #f39c12);
-  position: fixed;
   top: 0;
   height: 100vh;
   width: 100%;
