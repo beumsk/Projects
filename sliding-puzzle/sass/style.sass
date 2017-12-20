@@ -1,0 +1,84 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  width: 100vw
+  min-height: 100vh
+  font-family: Arial
+  background: linear-gradient(to bottom right, #e53935, #5e35b1)
+  
+header
+  padding: 20px
+  letter-spacing: 2px
+  color: white
+  text-shadow: 0 0 1px rgba(0,0,0,0.9)
+  
+.puzzle
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  width: 302px
+  min-height: 302px
+  box-shadow: 0 0 2px 2px rgba(256,256,256,0.3)
+  border: solid 1px white
+  
+  .items
+    display: inline
+    float: left
+    line-height: 100px
+    text-align: center
+    width: 100px
+    height: 100px
+    border: solid 1px white
+    cursor: pointer
+    color: rgba(0,0,0,0)
+    // background: linear-gradient(to bottom right, #D32F2F, #7C4DFF)
+    background: url(https://res.cloudinary.com/beumsk/image/upload/v1513108563/tiger_veeob8.jpg)
+    background-size: 300%
+  
+  .item1
+    background-position: top left
+    
+  .item2
+    background-position: top
+    
+  .item3
+    background-position: top right
+    
+  .item4
+    background-position: center left
+    
+  .item5
+    background-position: center
+    
+  .item6
+    background-position: center right
+    
+  .item7
+    background-position: bottom left
+    
+  .item8
+    background-position: bottom
+    
+  .item
+    background-position: bottom right
+  
+footer
+  padding: 10px
+  color: white
+  text-shadow: 0 0 1px rgba(0,0,0,0.9)
+  
+  a
+    text-decoration: none
+    color: #ffe082
+    
+    &:hover
+      text-decoration: underline
+      color: white
+  
