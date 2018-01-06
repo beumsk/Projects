@@ -116,19 +116,28 @@ var pixar = [
 var harryPotter = [
   
 ];
-var images = [];
-var theme = "";
-var count = 19;
-var rand = 0;
-var temp1 = "";
-var temp2 = "";
-var click = 0;
-var score = 0;
-var win = 0;
-var time = 0;
+
+var images = [],
+    theme = "",
+    count = 19,
+    rand = 0,
+    temp1 = "",
+    temp2 = "",
+    click = 0,
+    score = 0,
+    win = 0,
+    time = 0;
+
+var $themes = $(".themes"),
+    $pre = $("#pre"),
+    $box = $(".box"),
+    $time = $("#time"),
+    $score = $("#score"),
+    $post = $("#post"),
+    $final = $("#final");
 
 // initiate the game with chosen theme
-$(".themes").on("click", function () {
+$themes.on("click", function () {
   theme = $(this).attr("id");
   // insert theme in images array
   for (j=0; j<20; j++) {
@@ -151,11 +160,11 @@ $(".themes").on("click", function () {
   // insert images in memory game
   for (i=0; i<20; i++) {
     rand = Math.floor(Math.random() * count);
-    $(".box").eq(i).html("<img src='" + images[rand] + "' alt='image' class='hidden'>");
+    $box.eq(i).html("<img src='" + images[rand] + "' alt='image' class='hidden'>");
     images.splice(rand, 1);
     count--;
   }
-  $("#pre").fadeOut();
+  $pre.fadeOut();
 });
 
 // Handle the play
@@ -169,7 +178,7 @@ $(".play").on("click", function () {
     if (click === 0) {
       timer = setInterval(function() {
         time++;
-        $("#time").html(time + " sec");
+        $time.html(time + " sec");
       }, 1000);
     }
   }
@@ -183,7 +192,7 @@ $(".play").on("click", function () {
       if (score > 0){
         score -= 2;
       }
-      $("#score").html("score: " + score);
+      $score.html("score: " + score);
     }
     // same images
     else {
@@ -193,12 +202,12 @@ $(".play").on("click", function () {
       $(".current").parent().removeClass("play");
       $(".current").parent().off("click");
       $(".current").removeClass("current");
-      $("#score").html("score: " + score);
+      $score.html("score: " + score);
       // game won
       if (win === 20) {
         clearTimeout(timer);
-        $("#final").html("You won " + score + " points <br> in " + time + " seconds");
-        $("#modal").fadeIn();
+        $final.html("You won " + score + " points <br> in " + time + " seconds");
+        $post.css("display", "flex");
       }
     }
   }

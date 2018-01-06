@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
   <title>Memory</title>
@@ -12,11 +13,15 @@
 </head>
 
 <body>
-  <header>
+
+  
+<!-- HEADER -->
+<header>
   <h1>MEMORY</h1>
 </header>
 
-<section>
+<!-- main SECTION -->
+<section class="main">
   <div class="box play"></div>
   <div class="box play"></div>
   <div class="box play"></div>
@@ -37,17 +42,20 @@
   <div class="box play"></div>
   <div class="box play"></div>
   <div class="box play"></div>
+  
+  <div id="state">
+    <span id="time">sec</span>
+    <span id="score">Score: 0</span>
+  </div>
 </section>
-<div id="state">
-  <span id="time">sec</span>
-  <span id="score">Score: 0</span>
-</div>
 
+<!-- FOOTER -->
 <footer>
   <p>Created by <a href="http://remybeumier.be" target="_blank">Rémy Beumier</a></p>
 </footer>
 
-<div id="pre">
+<!-- PRE -->
+<section id="pre">
   <div id="themes">
     Chose your theme !
     <p id="pokemon" class="themes" title="Pokemon">Pokemon</p>
@@ -56,19 +64,28 @@
     <p id="disney" class="themes" title="Disney">Disney</p>
     <p id="pixar" class="themes" title="Pixar">Pixar</p>
   </div>
-</div>
+</section>
 
-<div id="modal">
+<!-- POST -->
+<section id="post">
   <div>
     <p>BRAVO !</p>
     <p id="final"></p>
     <br>
-    <p id="again"><a href="https://codepen.io/beumsk/full/xdoKjX/" target="_blank">Play Again !</a></p>
+    <p id="again">
+      <a href="https://codepen.io/beumsk/full/xdoKjX/" target="_blank">Play Again !</a>
+    </p>
   </div>
-</div>
+</section>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+  
 
     <script  src="js/index.js"></script>
 
+
+
+
 </body>
+
 </html>
