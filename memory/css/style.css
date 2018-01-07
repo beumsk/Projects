@@ -141,6 +141,7 @@ footer p a:hover {
 #pre {
   position: absolute;
   top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -178,6 +179,7 @@ footer p a:hover {
 #post {
   position: absolute;
   top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   display: flex;
