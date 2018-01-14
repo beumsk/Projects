@@ -4,57 +4,100 @@
   box-sizing: border-box;
 }
 
+html {
+  background: url(https://res.cloudinary.com/beumsk/image/upload/v1514984443/music_flpbpz.png);
+  background-size: 50px;
+  background-repeat: space;
+}
+
 body {
   min-height: 100vh;
-  background: whitesmoke;
-  background: linear-gradient(to top left, #bdc3c7, whitesmoke);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(256,256,256,0.8);
   text-align: center;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 header {
   color: #9b59b6;
-  padding-top: 20px;
-  letter-spacing: 0.4em;
+  font-size: 20px;
+  padding: 20px 10px;
+  letter-spacing: 6px;
+  text-shadow: 1px 1px #fff, 2px 2px #333;
+}
+@media only screen and (min-width:768px) and (min-height: 560px) {
+  header {
+    font-size: 26px;
+  }
 }
 
 section {
-  height: 400px;
-  width: 400px;
-  margin: 20px auto;
-  padding-top: 10px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
   border-radius: 100%;
+  position: relative;
+}
+@media only screen and (min-width:768px) and (min-height: 560px) {
+  section {
+    height: 400px;
+    width: 400px;
+  }
 }
 
 #center {
-  height: 190px;
-  width: 190px;
+  height: 150px;
+  width: 150px;
+  float: left;
   background: #9b59b6;
-  position: relative;
-  margin: auto;
-  bottom: 285px;
+  position: absolute;
+  left: 75px;
+  top: 75px;
   border-radius: 100%;
-  border: 8px solid #E2E4E6;
+  border: solid #333 4px;
+}
+@media only screen and (min-width:768px) and (min-height: 560px) {
+  #center {
+    height: 200px;
+    width: 200px;
+    left: 100px;
+    top: 100px;
+  }
 }
 
 input {
   width: 60px;
-  font-size: 25px;
+  font-size: 18px;
   text-align: center;
   margin: 20px auto 10px;
   border-radius: 5px;
   border: none;
   border: solid 2px #333;
 }
+@media only screen and (min-width:768px) and (min-height: 560px) {
+  input {
+    font-size: 25px;
+    margin-top: 25px;
+  }
+}
 
 #start, #strict {
   width: 60px;
-  margin: 10px auto;
-  padding: 10px 10px;
+  margin: 5px auto;
+  padding: 2px;
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
-  border: none;
+  border: solid #333 2px;
+}
+@media only screen and (min-width:768px) and (min-height: 560px) {
+  #start, #strict {
+    margin: 15px auto;
+    padding: 5px 10px;
+  }
 }
 .unclicked {
   background: #333;
@@ -68,64 +111,88 @@ input {
 #on-off {
   margin: 10px auto;
 }
+
 .da {
   background: #333;
-  display: inline;
-  height: 20px;
+  display: inline-block;
+  border: solid 2px #333;
 }
+
 #on {
   border-radius: 5px 0 0 5px;
 }
+
 .on {
   background: #388E3C;
 }
+
 #off {
   border-radius: 0 5px 5px 0;
 }
+
 .off {
   background: #D32F2F;
 }
+
 #on, #off {
-  width: 40px;
+  width: 30px;
+  height: 10px;
   padding: 5px 15px;
   cursor: pointer;
 }
+
 .active {
   background: whitesmoke;
   color: #333;
 }
 
 .colors {
-  height: 180px;
-  width: 180px;
-  margin: 2px;
-  display: inline-block;
+  height: 150px;
+  width: 150px;
+  float: left;
   cursor: pointer;
   box-shadow: none;
+  border: solid #333 4px;
+}
+@media only screen and (min-width:768px) and (min-height:560px) {
+  .colors {
+    height: 200px;
+    width: 200px;
+  }
+}
+.colors:hover {
+/*   box-shadow: inset 0 0 2px 2px #333; */
 }
 
 #green {
   background: #27ae60;
   border-radius: 100% 0 0 0;
+  border-width: 8px 2px 2px 8px;
 }
 
 #red {
   background: #c0392b;
   border-radius: 0 100% 0 0;
+  border-width: 8px 8px 2px 2px;
 }
 
 #yellow {
   background: #f39c12;
   border-radius: 0 0 0 100%;
+  border-width: 2px 2px 8px 8px;
 }
 
 #blue {
   background: #2980b9;
   border-radius: 0 0 100% 0;
+  border-width: 2px 8px 8px 2px;
 }
 
 footer {
   color: #9b59b6;
+  font-size: 14px;
+  clear: left;
+  padding: 10px;
 }
 
 footer a {
@@ -134,40 +201,6 @@ footer a {
 }
 footer a:hover {
   color: #9b59b6;
+  text-decoration: underline;
 }
 
-@media only screen and (min-width:1440px) {
-  section {
-    height: 600px;
-    width: 600px;
-  }
-  
-  #center {
-    height: 290px;
-    width: 290px;
-    bottom: 435px;
-  }
-  
-  input {
-    width: 80px;
-    font-size: 32px;
-    margin-top: 30px;
-  }
-  
-  #start, #strict {
-    margin: 30px auto;
-    padding: 10px 20px;
-    width: 80px;
-  }
-  
-  #on, #off {
-    width: 60px;
-    margin-top: 30px;
-    padding: 10px 25px;
-  }
-  
-  .colors {
-    height: 280px;
-    width: 280px;
-  }
-}

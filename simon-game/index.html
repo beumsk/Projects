@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
   <title>Simon Game</title>
@@ -12,8 +13,11 @@
 </head>
 
 <body>
+
   <header>
-  <h1>Simon Game</h1>
+  <h1>
+    <span style="color: #9b59b6;">S</span><span style="color: #27AE60;">i</span><span style="color: #C0392B;">m</span><span style="color: #2980B9;">o</span><span style="color: #F39C12;">n</span> <span style="color: #27AE60;">G</span><span style="color: #C0392B;">a</span><span style="color: #2980B9;">m</span><span style="color: #F39C12;">e</span>
+  </h1>
 </header>
 
 <section>
@@ -23,12 +27,12 @@
   <div id="blue" class="colors"></div>
   
   <div id="center">
-    <input id="count" value=""><br>
-    <button id="start" class="unclicked">Start</button>
-    <button id="strict" class="unclicked">Strict</button>
+    <input id="count" value="" readonly><br>
+    <button id="start" class="unclicked" disabled>Start</button>
+    <button id="strict" class="unclicked" disabled>Strict</button>
     <div id="on-off">
-      <div class="da" id="on"></div>
-      <div class="da off" id="off"></div>
+      <div class="da" id="on"></div><!--
+      --><div class="da off" id="off"></div>
     </div>
   </div>
 </section>
@@ -38,7 +42,13 @@
 </footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
+  
+
     <script  src="js/index.js"></script>
 
+
+
+
 </body>
+
 </html>
