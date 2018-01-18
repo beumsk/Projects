@@ -5,80 +5,88 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
   font-family: Arial;
+  background: #D54F58;
+  background-image: linear-gradient(to top left, #c0392b, #e74c3c , #9b59b6);
+  text-align: center;
 }
 
-header {
-  padding-top: 20px;
+/* title */
+header h1 {
+  padding: 10px 5px;
   color: whitesmoke;
   letter-spacing: 0.2em;
-  text-align: center;
+  font-weight: normal;
 }
 
-section {
+/* main content */
+.calculator {
   background: #2c3e50;
-/*   height: 350px; */
-  width: 310px;
-  margin-left: calc(50% - 155px);
-  margin-top: 30px;
-  border-radius: 5px;
+  width: 230px;
+  margin: auto;
+  border-radius: 2px;
   border: solid 5px whitesmoke;
-  box-shadow: #333 3px 3px 3px 1px;
+  box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
 }
 
-div > div, #screen {
+.button, #screen {
   background: whitesmoke;
   color: #2c3e50;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
+  border-radius: 2px;
 }
 
 #screen {
-  width: 280px;
+  width: 200px;
   height: 45px;
   margin: 10px;
   text-align: right;
   font-size: 40px;
   color: #2c3e50;
-  cursor: default;
   padding-right: 5px;
+  box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.4);
 }
 
-#buttons {
-  width: 280px;
-  margin: 10px;
+#keyboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 200px;
+  margin: 5px 10px;
 }
 
 .button {
-  display: inline-block;
-  transition: box-shadow 0.7s ease;
   box-shadow: 3px 3px 3px 1px black;
   color: #2c3e50;
-  margin: 4.98px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 16px;
 }
-.button:hover {
+.button:active {
   box-shadow: none;
 }
 
 .number, #clear, #comma {
-  width: 80px;
-  font-size: 20px;
+  width: 60px;
 }
 .operator {
-  width: 127.5px;
-  font-size: 20px;
+  width: 95px;
 }
 #equal {
-  width: 270px;
-  font-size: 40px;
+  width: 200px;
+  font-size: 24px;
 }
 
+/* footer */
 footer {
-  margin-top: 5vh;
+  font-size: 14px;
+  padding: 5px;
   color: whitesmoke;
-  font-size: 20px;
   text-align: center;
 }
 a {
@@ -87,25 +95,5 @@ a {
 }
 a:hover {
   color: whitesmoke;
-}
-
-.background {
-  background-image: linear-gradient(to top left, #c0392b, #e74c3c , #9b59b6);
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: -100;
-}
-
-@media only screen and (min-width: 768px) {
-  header {
-    font-size: 22px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  header {
-    font-size: 28px;
-  }
+  text-decoration: underline;
 }
