@@ -1,4 +1,5 @@
 
+// add mobile moves
 // weird bug stopping the game
 // ADD time?
 
@@ -55,7 +56,7 @@ function stopp() {
     start.querySelector("span").innerHTML = "Play Snake";
   }, 800);
   snake.init();
-  modul.style.display = "block";
+  modul.style.display = "flex";
 }
 
 // move the snake function

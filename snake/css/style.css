@@ -5,11 +5,15 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   font-family: arial;
   min-height: 100vh;
   background: #2ecc71;
   background-image: linear-gradient(to top left, #2980b9, #16a085, #2ecc71);
-/*   background-attachment: fixed; */
+  position: relative;
 }
 
 /* title */
@@ -17,29 +21,24 @@ header {
   text-align: center;
   font-size: 32px;
   letter-spacing: 10px;
-  padding: 20px;
+  padding: 10px 5px;
   color: white;
 }
 
 /* main table */
 .snakeTable {
-  position: absolute;
-  left: calc(50% - 105px);
-  top: calc(50% - 105px);
   width: 210px;
   height: 230px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-/*   box-shadow: 0 0 1px 2px rgba(0,0,0,0.3); */
+  box-shadow: 0 0 1px 2px rgba(0,0,0,0.3);
 }
 @media only screen and (min-width: 768px) {
   .snakeTable {
     width: 315px;
     height: 345px;
-    left: calc(50% - 157.5px);
-    top: calc(50% - 157.5px);
   }
 }
 
@@ -95,17 +94,18 @@ header {
 
 /* modular window before and after game */
 .modul {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 .start {
-  position: absolute;
-  top: calc(50% - 60px);
-  left: calc(50% - 130px);
   background: rgba(256, 256, 256, 0.9);
   width: 260px;
   padding: 50px;
@@ -120,5 +120,21 @@ header {
 .start span:hover {
   background: #16a085;
   color: white;
+}
+
+footer {
+  padding: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
