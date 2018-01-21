@@ -5,20 +5,20 @@
 }
 
 body {
-/*   min-height: 100vh; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   background: #9b59b6;
   background: linear-gradient(to top left, #9b59b6, #f39c12);
-/*   background-attachment: fixed; */
 }
 
 .title {
-  position: absolute;
-  top: 0;
   font: 36px Arial;
   letter-spacing: 0.1em;
-  width: 100vw;
-  padding: 6vh 10vw;
+  padding: 10px 5px;
   color: rgba(256, 256, 256, 0.5);
 }
 @media only screen and (min-width: 768px) {
@@ -32,7 +32,6 @@ body {
   height: 200px;
   border: solid 10px #333;
   border-radius: 50%;
-  margin: calc(50vh - 100px) calc(50% - 100px);
   position: relative;
   background: rgba(256, 256, 256, 0.25);
   cursor: pointer;
@@ -42,7 +41,6 @@ body {
     width: 300px;
     height: 300px;
     border: solid 15px #333;
-    margin: calc(50vh - 150px) calc(50% - 150px);
   }
 }
 
@@ -141,16 +139,15 @@ body {
     font: 58px/300px Arial;
   }
 }
-.clock:hover + .digit {
+.clock:hover > .digit {
   display: block;
 }
 
 footer {
-  position: absolute;
-  bottom: 3vh;
-  font: 16px Arial;
+  font: 14px Arial;
   color: rgba(256, 256, 256, 0.5);
   width: 100vw;
+  padding: 5px;
 }
 footer a {
   color: rgba(51, 51, 51, 0.75);
@@ -159,11 +156,4 @@ footer a {
 footer a:hover {
   color: rgba(256, 256, 256, 0.5);
   text-decoration: underline;
-}
-
-.background {
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: -100;
 }
