@@ -1,112 +1,145 @@
-// $(this).find("i").css("color", "whitesmoke");
 
-var playerSign = "";
-var compSign = "";
-var playerClass = "";
-var compClass = "";
-var victory = "";
+// prevent clicking
 
+// general var
+var playerIcon = "",
+    compIcon = "",
+    playerSign = "",
+    compSign = "",
+    grid = ["e","e","e", "e","e","e", "e","e","e"],
+    turn = 0,
+    next = 1;
 
-// if X chosen; hide dark box and set variables
-$("#playX").on("click", function () {
-  $("#dark").fadeOut();
-  playerSign = '<i class="fa fa-times fa-5x"></i>';
-  compSign = '<i class="fa fa-circle-o fa-5x"></i>';
-  playerClass = "xxx";
-  compClass = "ooo";
-  setTimeout(function () {
-    $("h1").html("X turn !");
-  }, 1000);
-});
+// DOM var
+var dark = document.querySelector("#dark"),
+    playX = document.querySelector("#playX"),
+    playO = document.querySelector("#playO"),
+    plays = document.querySelectorAll(".play");
 
-// if O chosen; hide dark box and set variables
-$("#playO").on("click", function () {
-  $("#dark").fadeOut();
-  playerSign = '<i class="fa fa-circle-o fa-5x"></i>';
-  compSign = '<i class="fa fa-times fa-5x"></i>';
-  playerClass = "ooo";
-  compClass = "xxx";
-  setTimeout(function () {
-    $("h1").html("O turn !");
-  }, 1000);
-});
+playX.addEventListener("click", function() { startGame("x") });
+playO.addEventListener("click", function() { startGame("o") });
 
-// click on boxes
-$(".playable").on("click", function () {
+// choose sign
+function startGame(sign) {
+  dark.style.display = "none";
+  playerSign = sign;
   
-  // make sign visible and remove box from playable ones
-  $(this).html(playerSign);
-  $(this).find("i").css("visibility", "visible");
-  $(this).removeClass("playable");
-  $(this).addClass(playerClass);
+  if (sign === "x") {
+    playerIcon = "<i class='fa fa-times fa-5x'></i>";
+    compIcon = "<i class='fa fa-circle-o fa-5x'></i>";
+    compSign = "o";
+  }
+  else if (sign === "o") {
+    playerIcon = "<i class='fa fa-circle-o fa-5x'></i>";
+    compIcon = "<i class='fa fa-times fa-5x'></i>";
+    compSign = "x";
+  }
   
-  // AI scripts; must be more complex !
-  var checker = true;
-    for (var i=1; i<10; i++) {
-      if (!$("#c" + i).hasClass(playerClass) && !$("#c" + i).hasClass(compClass) && checker) {
-        $("#c" + i).html(compSign);
-        $("#c" + i).find("i").css("visibility", "visible");
-        $("#c" + i).removeClass("playable");
-        $("#c" + i).addClass(compClass);
-        checker = false;
+  playerMove();
+}
+
+// player move
+function playerMove() {
+  for (let i=0; i<plays.length; i++) {
+    plays[i].addEventListener("click", function lol() {
+      this.innerHTML = playerIcon;
+      this.classList.remove("playable");
+      grid[this.id] = playerSign;
+      turn++;
+      checker("player");
+      
+      if (turn < 8 && next) {
+        setTimeout(function() {
+          compMove();
+        }, 100);
       }
-    }
+      // this.removeEventListener("click", lol());
+    });
+  }
+}
+
+// AI move
+function compMove() {
+  var randd = rand(plays.length);
+  while (grid[randd] === playerSign || grid[randd] === compSign) {
+    randd = rand(plays.length);
+  }
+  plays[randd].innerHTML = compIcon;
+  plays[randd].classList.remove("playable");
+  grid[randd] = compSign;
+  turn++;
   
-  // checks if player won; alert winner/loser and reset game
-  if (($("#c1").hasClass(playerClass) && $("#c2").hasClass(playerClass) && $("#c3").hasClass(playerClass)) || ($("#c4").hasClass(playerClass) && $("#c5").hasClass(playerClass) && $("#c6").hasClass(playerClass)) || ($("#c7").hasClass(playerClass) && $("#c8").hasClass(playerClass) && $("#c9").hasClass(playerClass)) || ($("#c1").hasClass(playerClass) && $("#c4").hasClass(playerClass) && $("#c7").hasClass(playerClass)) || ($("#c2").hasClass(playerClass) && $("#c5").hasClass(playerClass) && $("#c8").hasClass(playerClass)) || ($("#c3").hasClass(playerClass) && $("#c6").hasClass(playerClass) && $("#c9").hasClass(playerClass)) || ($("#c1").hasClass(playerClass) && $("#c5").hasClass(playerClass) && $("#c9").hasClass(playerClass)) || ($("#c3").hasClass(playerClass) && $("#c5").hasClass(playerClass) && $("#c7").hasClass(playerClass))) {
-    $("h1").html("You won !");
-    setTimeout(function () {
-      alert("You won against the computer !");
-    }, 10);
-    $("#dark").fadeIn();
-    // reset game !
-    setTimeout(function () {
-      $("h1").html("OXO");
-      $(".play").attr("class", "playable");
-      $(".playable").addClass("play");
-      $(".play").find("i").css("visibility", "hidden");
-    }, 10);
+  setTimeout(function() {
+    checker("comp");
+  }, 100);
+}
+
+// end game check func (win, lose, tie)
+function checker(whoo) {
+  console.log(grid);
+  
+  // win
+  if (    (whoo === "player") 
+      && ((grid[0]===playerSign && grid[1]===playerSign && grid[2]===playerSign)
+      ||  (grid[3]===playerSign && grid[4]===playerSign && grid[5]===playerSign)
+      ||  (grid[6]===playerSign && grid[7]===playerSign && grid[8]===playerSign)
+      ||  (grid[0]===playerSign && grid[3]===playerSign && grid[6]===playerSign)
+      ||  (grid[1]===playerSign && grid[4]===playerSign && grid[7]===playerSign)
+      ||  (grid[2]===playerSign && grid[5]===playerSign && grid[8]===playerSign)
+      ||  (grid[0]===playerSign && grid[4]===playerSign && grid[8]===playerSign)
+      ||  (grid[2]===playerSign && grid[4]===playerSign && grid[6]===playerSign))
+    ) {
+    next = 0;
+    setTimeout(function() {
+      alert("win");
+      // reset();
+      document.location.reload(true);
+    }, 100);
   }
   
-  // check if computer won; alert winner/loser and reset game
-  else if (($("#c1").hasClass(compClass) && $("#c2").hasClass(compClass) && $("#c3").hasClass(compClass)) || ($("#c4").hasClass(compClass) && $("#c5").hasClass(compClass) && $("#c6").hasClass(compClass)) || ($("#c7").hasClass(compClass) && $("#c8").hasClass(compClass) && $("#c9").hasClass(compClass)) || ($("#c1").hasClass(compClass) && $("#c4").hasClass(compClass) && $("#c7").hasClass(compClass)) || ($("#c2").hasClass(compClass) && $("#c5").hasClass(compClass) && $("#c8").hasClass(compClass)) || ($("#c3").hasClass(compClass) && $("#c6").hasClass(compClass) && $("#c9").hasClass(compClass)) || ($("#c1").hasClass(compClass) && $("#c5").hasClass(compClass) && $("#c9").hasClass(compClass)) || ($("#c3").hasClass(compClass) && $("#c5").hasClass(compClass) && $("#c7").hasClass(compClass))) {
-    $("h1").html("You lose !");
-    setTimeout(function () {
-      alert("You lose against the computer !");
-    }, 10);
-    $("#dark").fadeIn();
-    // reset game !
-    setTimeout(function () {
-      $("h1").html("OXO");
-      $(".play").attr("class", "playable");
-      $(".playable").addClass("play");
-      $(".play").find("i").css("visibility", "hidden");
-    }, 10);
+  // lose
+  else if ( (whoo === "comp") 
+        && ((grid[0]===compSign && grid[1]===compSign && grid[2]===compSign)
+        ||  (grid[3]===compSign && grid[4]===compSign && grid[5]===compSign)
+        ||  (grid[6]===compSign && grid[7]===compSign && grid[8]===compSign)
+        ||  (grid[0]===compSign && grid[3]===compSign && grid[6]===compSign)
+        ||  (grid[1]===compSign && grid[4]===compSign && grid[7]===compSign)
+        ||  (grid[2]===compSign && grid[5]===compSign && grid[8]===compSign)
+        ||  (grid[0]===compSign && grid[4]===compSign && grid[8]===compSign)
+        ||  (grid[2]===compSign && grid[4]===compSign && grid[6]===compSign))
+    ) {
+    setTimeout(function() {
+      alert("lose");
+      // reset();
+      document.location.reload(true);
+    }, 100);
   }
   
-  // check if player and computer tied
-  if (!$("#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9").hasClass("playable")) {
-    $("h1").html("You tied !");
-    setTimeout(function () {
-      alert("You tied with the computer !");
-    }, 10);
-    $("#dark").fadeIn();
-    // reset game !
-    setTimeout(function () {
-      $("h1").html("OXO");
-      $(".play").attr("class", "playable");
-      $(".playable").addClass("play");
-      $(".play").find("i").css("visibility", "hidden");
-    }, 10);
+  // tie
+  else if (turn === 9) {
+    setTimeout(function() {
+      alert("tie");
+      // reset();
+      document.location.reload(true);
+    }, 100);
   }
-  
-    
-});
+}
 
+// reset func
+function reset() {
+  dark.style.display = "flex";
+  playerIcon = "";
+  compIcon = "";
+  grid = ["e","e","e", "e","e","e", "e","e","e"];
+  turn = 0;
+  for (var i=0; i<plays.length; i++) {
+    plays[i].innerHTML = "";
+    plays[i].classList.add("playable");
+    // plays[i].removeEventListener("click", lol());
+  }
+}
 
-
-
-
-
-// https://medium.com/front-end-hacking/tic-tac-toe-javascript-game-b0cd6e98edd9
-// http://codereview.stackexchange.com/questions/60871/tic-tac-toe-in-plain-javascript
+// random func
+function rand(num) {
+  return Math.floor(Math.random() * num); 
+}
