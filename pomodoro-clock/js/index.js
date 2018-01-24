@@ -1,10 +1,9 @@
 
-var time = document.getElementById("time");
-var minute = document.getElementById("min");
-var second = document.getElementById("sec");
-
-var startButton = document.getElementById("start");
-var resetButton = document.getElementById("reset");
+var time = document.getElementById("time"),
+    minute = document.getElementById("min"),
+    second = document.getElementById("sec"),
+    startButton = document.getElementById("start"),
+    resetButton = document.getElementById("reset");
 
 startButton.addEventListener("click", function start () {
   if (startButton.innerHTML === "START") {
