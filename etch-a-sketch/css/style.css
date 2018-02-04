@@ -5,23 +5,22 @@
 
 body {
   font-family: Arial;
-  background: ;
+  min-height: 100vh;
+  text-align: center;
+  background: #03A9F4;
   background-image: linear-gradient(to bottom left, #03A9F4 10%, #673AB7 90%);
-  background-attachment: fixed;
 }
 
 header {
-  position: absolute;
-  top: 10px;
-  letter-spacing: .2em;
+  padding: 10px;
+  letter-spacing: 0.2em;
   color: #f5f5f5;
   width: 100%;
   text-align: center;
 }
 
 section {
-  text-align: center;
-  margin: 60px auto 20px;
+  margin: auto;
 }
 
 section .box {
@@ -33,12 +32,12 @@ section .box {
 
 .buttons {
   clear: both;
-  text-align: center;
+  padding: 10px;
 }
 
 .buttons span, #size {
   padding: 5px 10px;
-  margin: auto 10px;
+  margin: auto 5px;
   border: 1px solid #f5f5f5;
   border-radius: 2px;
   color: #f5f5f5;
@@ -56,10 +55,11 @@ section .box {
 }
 
 footer {
-  margin: 30px auto 10px;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
   width: 100%;
-  text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   color: #f5f5f5;
 }
 footer a {

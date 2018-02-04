@@ -1,16 +1,15 @@
 
-var containerSide = "300px";
-var type = "gradient";
-var box = document.getElementsByClassName("box");
-var section = document.querySelector("section");
-var gradient = document.querySelector("#gradient");
-var random = document.querySelector("#random");
-var reset = document.querySelector("#reset");
-var size = document.querySelector("#size");
-var boxSide = 16;
+var containerSide = "300px",
+    type = "gradient",
+    box = document.getElementsByClassName("box"),
+    section = document.querySelector("section"),
+    gradient = document.querySelector("#gradient"),
+    random = document.querySelector("#random"),
+    reset = document.querySelector("#reset"),
+    size = document.querySelector("#size"),
+    boxSide = 16;
 
 section.style.width = containerSide;
-section.style.height = containerSide;
 
 init();
 
