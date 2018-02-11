@@ -9,7 +9,6 @@ body {
   background: url('https://images3.alphacoders.com/273/thumb-1920-273289.jpg') no-repeat;
   background-position: bottom left;
   background-size: cover;
-/*   background-attachment: fixed; */
   color: whitesmoke;
   text-align: center;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -17,6 +16,7 @@ body {
 
 header {
   padding: 20px 0;
+  text-shadow: 1px 1px #F44336;
 }
 
 h1 {
@@ -34,6 +34,7 @@ h1 {
   width: 250px;
   border-radius: 50%;
   background: rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px 4px rgba(0,0,0,0.1);
 }
 #random:hover {
   cursor: pointer;
@@ -72,10 +73,12 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 5px;
+  font-size: 14px;
 }
 a {
   color: #F44336;
   text-decoration: none;
+  text-shadow: none;
 }
 a:hover, a:focus {
   color: whitesmoke;
