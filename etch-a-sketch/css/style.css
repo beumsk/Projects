@@ -9,6 +9,10 @@ body {
   text-align: center;
   background: #03A9F4;
   background-image: linear-gradient(to bottom left, #03A9F4 10%, #673AB7 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header {
@@ -19,11 +23,11 @@ header {
   text-align: center;
 }
 
-section {
+.table {
   margin: auto;
 }
 
-section .box {
+.table .box {
   float: left;
   border: 1px solid #333;
   border-radius: 2px;
@@ -55,8 +59,6 @@ section .box {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   padding: 5px;
   width: 100%;
   font-size: 14px;

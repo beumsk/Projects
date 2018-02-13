@@ -2,14 +2,14 @@
 var containerSide = "300px",
     type = "gradient",
     box = document.getElementsByClassName("box"),
-    section = document.querySelector("section"),
+    table = document.querySelector(".table"),
     gradient = document.querySelector("#gradient"),
     random = document.querySelector("#random"),
     reset = document.querySelector("#reset"),
     size = document.querySelector("#size"),
     boxSide = 16;
 
-section.style.width = containerSide;
+table.style.width = containerSide;
 
 init();
 
@@ -45,7 +45,7 @@ function init() {
 
 function resetGrid(sidee) {
   boxSide = sidee;
-  section.innerHTML = "";
+  table.innerHTML = "";
   init();
   size.value = sidee;
 }
@@ -76,8 +76,8 @@ function randomColor(event) {
 function createDiv() {
   var divElt = document.createElement("div");
   divElt.classList.add("box");
-  divElt.style.height = section.offsetWidth / boxSide + "px";
-  divElt.style.width = section.offsetWidth / boxSide + "px";
+  divElt.style.height = table.offsetWidth / boxSide + "px";
+  divElt.style.width = table.offsetWidth / boxSide + "px";
   divElt.style.opacity = 0.1;
-  section.appendChild(divElt);
+  table.appendChild(divElt);
 }
