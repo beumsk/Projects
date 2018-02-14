@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
   <title>To Do List</title>
@@ -12,23 +13,30 @@
 </head>
 
 <body>
-  
-<section id="top">
-  <h1>To Do List</h1>
-  <form>
-    <input id="inp" type="text" placeholder="Type list element here">
-    <button title="Add element">Add</button>
-  </form>
-</section>
 
-<section id="bottom">
   
+<section class="main">
+  <div id="top">
+    <h1>To Do List</h1>
+    <form autocomplete="off">
+      <input id="inp" type="text" placeholder="Type list element here" required>
+      <button id="button" title="Add element">Add</button>
+    </form>
+  </div>
+
+  <div id="bottom"></div>
 </section>
 
 <footer>Created by <a href="http://remybeumier.be" target="_blank">Rémy Beumier</a></footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
+  
+
     <script  src="js/index.js"></script>
 
+
+
+
 </body>
+
 </html>
