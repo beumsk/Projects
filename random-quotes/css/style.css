@@ -4,25 +4,25 @@ body {
 
 #title {
   color: white;
-  font-weight: bold;
-  margin-top: 10vh;
+  padding: 10px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 #main {
-  margin-top: 6vh;
+  margin-top: 20px;
   width: 60%;
+  overflow: auto;
 }
 
-#twitter {
-  float: left;
-  text-decoration: none;
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .btn {
-  background-color: #23BB63;
-}
-
-.btn:hover {
   background-color: #23BB63;
 }
 
@@ -31,17 +31,20 @@ a {
   font-weight: bold;
 }
 
-#newQuote {
-  float: right;
+a:hover, a:active, a:focus {
+  color: white;
 }
 
 #thanks {
   color: whitesmoke;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
 }
 
 #footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
   color: white;
-  margin-top: 40px;
 }
