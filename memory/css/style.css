@@ -22,7 +22,7 @@ header {
   color: whitesmoke;
   letter-spacing: 0.4em;
   font-size: 22px;
-  padding: 30px 10px;
+  padding: 10px 5px;
 }
 @media only screen and (min-width: 768px) {
   header {
@@ -41,7 +41,7 @@ header {
   background: whitesmoke;
   width: 250px;
   height: 345px;
-  box-shadow: #333 3px 3px 3px 1px;
+  box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
 }
 @media only screen and (min-width: 768px) {
   .main {
@@ -118,7 +118,8 @@ img {
 /* FOOTER */
 footer p {
   color: whitesmoke;
-  padding: 20px;
+  padding: 5px;
+  font-size: 14px;
   clear: both;
 }
 
