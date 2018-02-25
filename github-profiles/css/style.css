@@ -1,13 +1,19 @@
+body {
+  background: ;
+}
+
 section {
-  padding-top: 20px;
+}
+
+h1 {
+  padding: 20px 0;
 }
 
 form {
-  padding-bottom: 20px;
 }
 
 img {
-  margin-bottom: 10px;
+  margin-top: 10px;
   border-radius: 50%;
 }
 
