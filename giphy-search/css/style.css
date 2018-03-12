@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,7 @@ body {
   font-family: Arial;
   text-align: center;
   min-height: 100vh;
-  min-width: 360px;
+  min-width: 370px;
   background-image: linear-gradient(135deg,#00ccff,#9933ff 31%,#e646b6 52%,#fff9aa 77%,#00ff99,#00ccff);
   background-size: 200%;
 }
@@ -53,7 +54,7 @@ section .search:focus {
 
 section .btn {
   cursor: pointer;
-  width: 45px;
+  width: 60px;
 }
 section .btn:hover {
   color: #333;
@@ -89,11 +90,11 @@ footer {
   color: white;
 }
 
-footer a {
+a {
   color: #333;
   text-decoration: none;
 }
-footer a:hover {
+a:hover {
   color: white;
   text-decoration: underline;
 }

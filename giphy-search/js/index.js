@@ -4,7 +4,8 @@
 var $form = $("form"),
     $search = $(".search"),
     $clear = $(".clear"),
-    $giphy = $(".giphy img");
+    $giphy = $(".giphy img"),
+    $giphyLink = $(".giphy a");
 
 // launch function on form submit
 $form.on("submit", function(e) {
@@ -26,6 +27,7 @@ function goGiphy() {
     $giphy.fadeOut(1000);
     setTimeout( function() {
       $giphy.attr("src", imgSrc);
+      $giphyLink.attr("href", imgSrc);
       setTimeout( function() {
         $giphy.addClass("gif");
         $giphy.fadeIn(1000);
