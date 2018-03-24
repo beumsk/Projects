@@ -1,5 +1,5 @@
 body {
-  background: url('https://upload.wikimedia.org/wikipedia/commons/a/a7/Wikipedia_logo_v3.svg') no-repeat fixed;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/a/a7/Wikipedia_logo_v3.svg') no-repeat fixed, white;
   background-size: 40%;
   background-position: center 80%;
 }
