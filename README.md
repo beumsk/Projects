@@ -11,6 +11,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/carousel" target="_blank">Carousel</a></li>
     <li><a href="https://beumsk.github.io/Projects/date-counter" target="_blank">Date Counter</a></li>
     <li><a href="https://beumsk.github.io/Projects/etch-a-sketch" target="_blank">Ecth a Sketch</a></li>
+    <li><a href="https://beumsk.github.io/Projects/giphy-search/" target="_blank">Giphy Search</a></li>
     <li><a href="https://beumsk.github.io/Projects/github-profiles" target="_blank">Github Profiles</a></li>
     <li><a href="https://beumsk.github.io/Projects/javascript-calculator" target="_blank">Javascript Calculator</a></li>
     <li><a href="https://beumsk.github.io/Projects/javascript-clock" target="_blank">Javascript Clock</a></li>
