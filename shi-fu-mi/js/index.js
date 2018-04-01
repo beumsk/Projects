@@ -1,9 +1,19 @@
-var signs = ["rock", "paper", "scissors"];
-var randomSign = "";
-var chosenSign = "";
-var answer = "";
-var userScore = 0;
-var aiScore = 0;
+
+// add rounds (eg first to 5) and try again button to start over
+
+var signs = ["rock", "paper", "scissors"],
+    chosenSign = "",
+    randomSign = "",
+    answer = "",
+    userScore = 0,
+    aiScore = 0,
+    $react = $("#react"),
+    $chosen = $("#chosen"),
+    $random = $("#random"),
+    $signChosen = $("#signChosen"),
+    $signRandom = $("#signRandom"),
+    $answer = $("#answer"),
+    $score = $("#score");
 
 // get random sign from signs[]
 function getRandomSign() {
@@ -11,51 +21,27 @@ function getRandomSign() {
   randomSign = signs[random];
 }
 
-// get chosen sign from fa-icons
-$("#rock").click(function() {
-  chosenSign = "rock";
-});
-$("#paper").click(function() {
-  chosenSign = "paper";
-});
-$("#scissors").click(function() {
-  chosenSign = "scissors";
-});
-
 // get answer comparing signs
 function getAnswer(randomSign, chosenSign) {
+  // tie
   if (randomSign === chosenSign) {
     answer = "<span class='btn btn-warning'>You tied with me, play again !</span>";
-    $("#react").css("color", "#f0ad4e");
+    $react.css("color", "#f0ad4e");
   }
-  else if (chosenSign === "scissors" && randomSign === "paper") {
+  // win
+  else if ((chosenSign === "scissors" && randomSign === "paper") || 
+           (chosenSign === "rock" && randomSign === "scissors") || 
+           (chosenSign === "paper" && randomSign === "rock")) {
     answer = "<span class='btn btn-success'>You win !</span>";
-    $("#react").css("color", "#5cb85c");
+    $react.css("color", "#5cb85c");
     userScore++;
   }
-  else if (chosenSign === "scissors" && randomSign === "rock") {
+  // lose
+  else if ((chosenSign === "scissors" && randomSign === "rock") || 
+           (chosenSign === "paper" && randomSign === "scissors") || 
+           (chosenSign === "rock" && randomSign === "paper")) {
     answer = "<span class='btn btn-danger'>You lose !</span>";
-    $("#react").css("color", "#d9534f");
-    aiScore++;
-  }
-  else if (chosenSign === "paper" && randomSign === "rock") {
-    answer = "<span class='btn btn-success'>You win !</span>";
-    $("#react").css("color", "#5cb85c");
-    userScore++;
-  }
-  else if (chosenSign === "paper" && randomSign === "scissors") {
-    answer = "<span class='btn btn-danger'>You lose !</span>";
-    $("#react").css("color", "#d9534f");
-    aiScore++;
-  }
-  else if (chosenSign === "rock" && randomSign === "scissors") {
-    answer = "<span class='btn btn-success'>You win !</span>";
-    $("#react").css("color", "#5cb85c");
-    userScore++;
-  }
-  else if (chosenSign === "rock" && randomSign === "paper") {
-    answer = "<span class='btn btn-danger'>You lose !</span>";
-    $("#react").css("color", "#d9534f");
+    $react.css("color", "#d9534f");
     aiScore++;
   }
   else {
@@ -65,24 +51,27 @@ function getAnswer(randomSign, chosenSign) {
 
 // get reaction texts and signs
 function getReact() {
-  $("#chosen").html("You played <b>" + chosenSign + "</b> !");
-  $("#signC").removeClass("fa-hand-rock-o");
-  $("#signC").removeClass("fa-hand-paper-o");
-  $("#signC").removeClass("fa-hand-scissors-o");
-  $("#signC").addClass("fa-hand-" + chosenSign + "-o");
-  $("#random").html("I played <b>" + randomSign + "</b> !");
-  $("#signR").removeClass("fa-hand-rock-o");
-  $("#signR").removeClass("fa-hand-paper-o");
-  $("#signR").removeClass("fa-hand-scissors-o");
-  $("#signR").addClass("fa-hand-" + randomSign + "-o");
-  $("#answer").html(answer);
-  $("#score").html(userScore + " vs " + aiScore);
+  // player action
+  $chosen.html("You played <b>" + chosenSign + "</b> !");
+  $signChosen.removeClass("fa-hand-rock-o fa-hand-paper-o fa-hand-scissors-o");
+  $signChosen.addClass("fa-hand-" + chosenSign + "-o");
+  // computer action
+  $random.html("I played <b>" + randomSign + "</b> !");
+  $signRandom.removeClass("fa-hand-rock-o fa-hand-paper-o fa-hand-scissors-o");
+  $signRandom.addClass("fa-hand-" + randomSign + "-o");
+  // results
+  $answer.html(answer);
+  $score.html(userScore + " vs " + aiScore);
+  // display the box
+  $react.fadeIn();
 }
 
 // run shifumi :D
 $(".gooo").on("click", function() {
+  $react.hide();
+  var $current = $(this);
+  chosenSign = $current.attr("id");
   getRandomSign();
   getAnswer(randomSign, chosenSign);
   getReact();
-  $("#react").addClass("well");
-})
+});
