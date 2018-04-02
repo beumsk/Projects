@@ -1,7 +1,7 @@
 
-var launch = document.getElementsByClassName("launch");
-var rocket = document.getElementsByClassName("rocket");
-var footer = document.getElementsByTagName("footer");
+var launch = document.getElementsByClassName("launch"),
+    rocket = document.getElementsByClassName("rocket"),
+    footer = document.getElementsByTagName("footer");
 
 launch[0].addEventListener("click", function () {
   launch[0].style.display = "none";
