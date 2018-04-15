@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace;
+}
+
+header h1 {
+  font-weight: normal;
+  padding: 20px 10px 10px 10px;
+  letter-spacing: 0.1em;
+  border-bottom: double 6px #EB0C42;
+/*   color: #EF0007; */
+}
+
+.main {
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
+  padding: 0 35px;
+  background: black;
+}
+
+.status {
+  color: white;
+  font-size: 16px;
+  padding: 15px 5px;
+  height: 40px;
+}
+.score {
+  float: left;
+}
+.score::after {
+  content: " points";
+}
+.time {
+  float: right;
+}
+.time::after {
+  content: " sec"
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 5px;
+  border-bottom: double 6px #EB0C42;
+  position: relative;
+  overflow: hidden;
+}
+
+.box img {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+  transition: top 0.3s;
+}
+
+.modal {
+  position: absolute;
+  background: rgba(0,0,0,0.4);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal div {
+  background: white;
+  width: 300px;
+  margin: 50px auto;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.modal p {
+  padding: 0px 10px 20px;
+}
+
+.modal .end {
+  display: block;
+  padding: 10px;
+  color: #EB0C42;
+  border: double 6px #EB0C42;
+  cursor: pointer;
+  transition: background 0.4s, color 0.4s;
+}
+.modal .end:hover {
+  background: #EB0C42;
+  color: white;
+}
+
+footer {
+  font-size: 14px;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #EB0C42;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #000;
+}
