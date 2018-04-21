@@ -48,7 +48,7 @@ setInterval(function() {
   else {
     // show score and reload
     modalP.innerHTML = "You scored " + score + " !";
-    modal.style.display = "flex";
+    modal.style.display = "flex";
   }
 }, 1000);
 
