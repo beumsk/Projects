@@ -19,6 +19,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/memory" target="_blank">Memory</a></li>
     <li><a href="https://beumsk.github.io/Projects/pokemon" target="_blank">Pokemon</a></li>
     <li><a href="https://beumsk.github.io/Projects/pomodoro-clock" target="_blank">Pomodoro Clock</a></li>
+    <li><a href="https://beumsk.github.io/Projects/pac-man-css" target="_blank">Pac Man CSS</a><li>
     <li><a href="https://beumsk.github.io/Projects/random-quotes" target="_blank">Random Quotes</a></li>
     <li><a href="https://beumsk.github.io/Projects/rocket-launch" target="_blank">Rocket Launch</a></li>
     <li><a href="https://beumsk.github.io/Projects/sharing-links" target="_blank">Sharing Links</a></li>
@@ -28,6 +29,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/snake" target="_blank">Snake</a></li>
     <li><a href="https://beumsk.github.io/Projects/tic-tac-toe" target="_blank">Tic Tac Toe</a></li>
     <li><a href="https://beumsk.github.io/Projects/to-do-list" target="_blank">To Do List</a></li>
+    <li><a href="https://beumsk.github.io/Projects/whack-a-donkey-kong/" target="_blank">Whack a Donkey Kong</a></li>
     <li><a href="https://beumsk.github.io/Projects/wiki-viewer" target="_blank">Wiki Viewer</a></li>
     <!-- <li><a href="https://beumsk.github.io/Projects/" target="_blank">title</a></li> -->
   </ul>
