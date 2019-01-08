@@ -10,6 +10,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/android-guy" target="_blank">Android Guy</a></li>
     <li><a href="https://beumsk.github.io/Projects/carousel" target="_blank">Carousel</a></li>
     <li><a href="https://beumsk.github.io/Projects/date-counter" target="_blank">Date Counter</a></li>
+    <li><a href="https://beumsk.github.io/Projects/drum-machine" target="_blank">Drum Machine</a></li>
     <li><a href="https://beumsk.github.io/Projects/etch-a-sketch" target="_blank">Ecth a Sketch</a></li>
     <li><a href="https://beumsk.github.io/Projects/giphy-search/" target="_blank">Giphy Search</a></li>
     <li><a href="https://beumsk.github.io/Projects/github-profiles" target="_blank">Github Profiles</a></li>
