@@ -1,61 +1,44 @@
 
-// prevent clicking
+// TODO create AI
 
-// general var
-var playerIcon = "",
-    compIcon = "",
-    playerSign = "",
+var playerSign = "",
     compSign = "",
     grid = ["e","e","e", "e","e","e", "e","e","e"],
     turn = 0,
     next = 1;
 
-// DOM var
 var dark = document.querySelector("#dark"),
+    message = document.querySelector("#message"),
     playX = document.querySelector("#playX"),
     playO = document.querySelector("#playO"),
     plays = document.querySelectorAll(".play");
 
-playX.addEventListener("click", function() { startGame("x") });
-playO.addEventListener("click", function() { startGame("o") });
+playX.addEventListener("click", startGame);
+playO.addEventListener("click", startGame);
 
 // choose sign
-function startGame(sign) {
-  dark.style.display = "none";
-  playerSign = sign;
-  
-  if (sign === "x") {
-    playerIcon = "<i class='fa fa-times fa-5x'></i>";
-    compIcon = "<i class='fa fa-circle-o fa-5x'></i>";
-    compSign = "o";
+function startGame(e) {
+  dark.classList.add("hidden");
+  playerSign = e.target.getAttribute("data-sign");
+  compSign = playerSign == "x" ? "o" : "x";
+  for (var i=0; i<plays.length; i++) {
+    plays[i].addEventListener("click", playerMove);
   }
-  else if (sign === "o") {
-    playerIcon = "<i class='fa fa-circle-o fa-5x'></i>";
-    compIcon = "<i class='fa fa-times fa-5x'></i>";
-    compSign = "x";
-  }
-  
-  playerMove();
 }
 
 // player move
-function playerMove() {
-  for (let i=0; i<plays.length; i++) {
-    plays[i].addEventListener("click", function lol() {
-      this.innerHTML = playerIcon;
-      this.classList.remove("playable");
-      grid[this.id] = playerSign;
-      turn++;
-      checker("player");
-      
-      if (turn < 8 && next) {
-        setTimeout(function() {
-          compMove();
-        }, 100);
-      }
-      // this.removeEventListener("click", lol());
-    });
+function playerMove(e) {
+  e.target.innerHTML = playerSign;
+  e.target.classList.remove("playable");
+  grid[e.target.id] = playerSign;
+  turn++;
+  checker("player");
+  if (turn < 8 && next) {
+    setTimeout(function() {
+      compMove();
+    }, 200);
   }
+  e.target.removeEventListener("click", playerMove);
 }
 
 // AI move
@@ -64,20 +47,18 @@ function compMove() {
   while (grid[randd] === playerSign || grid[randd] === compSign) {
     randd = rand(plays.length);
   }
-  plays[randd].innerHTML = compIcon;
+  plays[randd].innerHTML = compSign;
   plays[randd].classList.remove("playable");
+  plays[randd].removeEventListener("click", playerMove);
   grid[randd] = compSign;
   turn++;
-  
   setTimeout(function() {
     checker("comp");
   }, 100);
 }
 
-// end game check func (win, lose, tie)
+// end game checker (win, lose, tie)
 function checker(whoo) {
-  console.log(grid);
-  
   // win
   if (    (whoo === "player") 
       && ((grid[0]===playerSign && grid[1]===playerSign && grid[2]===playerSign)
@@ -91,12 +72,9 @@ function checker(whoo) {
     ) {
     next = 0;
     setTimeout(function() {
-      alert("win");
-      // reset();
-      document.location.reload(true);
-    }, 100);
+      reset("You win !");
+    }, 500);
   }
-  
   // lose
   else if ( (whoo === "comp") 
         && ((grid[0]===compSign && grid[1]===compSign && grid[2]===compSign)
@@ -109,34 +87,37 @@ function checker(whoo) {
         ||  (grid[2]===compSign && grid[4]===compSign && grid[6]===compSign))
     ) {
     setTimeout(function() {
-      alert("lose");
-      // reset();
-      document.location.reload(true);
-    }, 100);
+      reset("You lose !");
+    }, 500);
   }
-  
   // tie
   else if (turn === 9) {
     setTimeout(function() {
-      alert("tie");
-      // reset();
-      document.location.reload(true);
-    }, 100);
+      reset("You tied !");
+    }, 500);
   }
 }
 
 // reset func
-function reset() {
-  dark.style.display = "flex";
-  playerIcon = "";
-  compIcon = "";
+function reset(msg) {
+  playX.classList.add("hidden");
+  playO.classList.add("hidden");
+  message.textContent = msg;
+  message.classList.remove("hidden");
+  dark.classList.remove("hidden");
   grid = ["e","e","e", "e","e","e", "e","e","e"];
   turn = 0;
-  for (var i=0; i<plays.length; i++) {
-    plays[i].innerHTML = "";
-    plays[i].classList.add("playable");
-    // plays[i].removeEventListener("click", lol());
+  next = 1;
+  for (var j=0; j<plays.length; j++) {
+    plays[j].innerHTML = "";
+    plays[j].classList.add("playable");
+    plays[j].removeEventListener("click", playerMove);
   }
+  setTimeout(function() {
+    playX.classList.remove("hidden");
+    playO.classList.remove("hidden");
+    message.classList.add("hidden");
+  }, 1500);
 }
 
 // random func

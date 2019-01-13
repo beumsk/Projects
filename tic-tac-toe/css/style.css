@@ -1,7 +1,12 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -14,41 +19,47 @@ body {
   text-align: center;
   background: #f1c40f;
   background-image: linear-gradient(to top left, #d35400, #f1c40f);
-  position: relative;
 }
 
 /* Modal window */
 #dark {
-  position: fixed;
+  position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 #dark #box {
-  padding: 10px 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+/*   height: 200px; */
+  padding: 20px;
   background: whitesmoke;
   border-radius: 2px;
 }
 
-#box #playX, #box #playO, #box #won {
-  background: whitesmoke;
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 20px 10px;
+#box #playX, #box #playO, #box #message {
+  min-width: 120px;
+  margin: 10px;
+  padding: 10px 30px;
   border: solid #EAA80B 1.5px;
   border-radius: 2px;
   color: #EAA80B;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   white-space: nowrap;
 }
-#box #playX:hover, #box #playO:hover, #box #won:hover {
+#box #playX:hover, #box #playO:hover {
   background: #EAA80B;
   color: whitesmoke;
 }
@@ -58,7 +69,7 @@ header h1 {
   letter-spacing: 0.2em;
   color: whitesmoke;
   font-size: 34px;
-  padding: 10px 5px;
+  padding: 20px 10px;
   font-weight: normal;
 }
 @media only screen and (min-width: 768px) {
@@ -70,6 +81,7 @@ header h1 {
 /* main square */
 .main {
   width: 262px;
+  height: 262px;
   padding: 5px;
   margin: auto;
   background: whitesmoke;
@@ -78,6 +90,7 @@ header h1 {
 @media only screen and (min-width: 768px) {
   .main {
     width: 332px;
+    height: 332px;
     padding: 10px;
   }
 }
@@ -92,17 +105,17 @@ header h1 {
   background-size: 200%;
   float: left;
   border-radius: 2px;
-}
-.main div i {
+  color: whitesmoke;
+  font-size: 60px;
   line-height: 80px;
+  font-family: monospace;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 768px) {
   .main div {
     width: 100px;
     height: 100px;
     margin: 2px;
-  }
-  .main div i {
     line-height: 100px;
   }
 }
@@ -111,12 +124,12 @@ header h1 {
   cursor: pointer;
 }
 
-i {
-  color: whitesmoke;
+.hidden {
+  display: none !important;
 }
 
-
 footer {
+  clear: both;
   padding: 5px;
   text-align: center;
   color: whitesmoke;
