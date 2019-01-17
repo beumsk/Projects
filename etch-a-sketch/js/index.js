@@ -13,6 +13,7 @@ table.style.width = containerSide;
 
 init();
 
+// Event listeners 
 reset.addEventListener("click", function() {
   resetGrid(size.value);
 });
@@ -30,12 +31,12 @@ gradient.addEventListener("click", function() {
 });
 
 size.addEventListener("input", function(e) {
-  if (this.value !== 16) {
-    console.log(this.value);
-    resetGrid(this.value);
+  if (e.target.value !== 16) {
+    resetGrid(e.target.value);
   }
 });
 
+// init function
 function init() {
   for(var i=0; i<boxSide*boxSide; i++) {
     createDiv();
@@ -43,6 +44,7 @@ function init() {
   main();
 }
 
+// reset function
 function resetGrid(sidee) {
   boxSide = sidee;
   table.innerHTML = "";
@@ -68,11 +70,13 @@ function opacityIncrement(event) {
   event.style.opacity = parseFloat(event.style.opacity) + 0.2;
 }
 
+// get random color
 function randomColor(event) {
   event.style.opacity = 1;
   event.style.background = "#"+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
 }
 
+// creates div and append it to the table
 function createDiv() {
   var divElt = document.createElement("div");
   divElt.classList.add("box");
