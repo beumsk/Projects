@@ -18,6 +18,7 @@ playO.addEventListener("click", startGame);
 
 // choose sign
 function startGame(e) {
+  clearInterval(checkPageInterval);
   dark.classList.add("hidden");
   playerSign = e.target.getAttribute("data-sign");
   compSign = playerSign == "x" ? "o" : "x";
@@ -124,3 +125,14 @@ function reset(msg) {
 function rand(num) {
   return Math.floor(Math.random() * num); 
 }
+
+// handle focus of the page
+function checkPageFocus() {
+  if (document.hasFocus()) {
+    dark.classList.remove("hidden");
+  }
+  else {
+    dark.classList.add("hidden");
+  }
+}
+var checkPageInterval = setInterval(checkPageFocus, 300);
