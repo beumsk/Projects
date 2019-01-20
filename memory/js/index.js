@@ -1,119 +1,141 @@
- 
-// host images on cloudinary !
+
 // other themes to add (HP, )
 // bigger memory?
 
-var pokemon = [
-  'http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png',
-  'http://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/250px-004Charmander.png',
-  'http://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png',
-  'http://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png',
-  'http://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png',
-  'http://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png',
-  'http://cdn.bulbagarden.net/upload/thumb/4/4e/144Articuno.png/250px-144Articuno.png',
-  'http://cdn.bulbagarden.net/upload/thumb/e/e3/145Zapdos.png/250px-145Zapdos.png',
-  'http://cdn.bulbagarden.net/upload/thumb/1/1b/146Moltres.png/250px-146Moltres.png',
-  'http://cdn.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/250px-133Eevee.png',
-  'http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png',
-  'http://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/250px-004Charmander.png',
-  'http://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png',
-  'http://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png',
-  'http://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png',
-  'http://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png',
-  'http://cdn.bulbagarden.net/upload/thumb/4/4e/144Articuno.png/250px-144Articuno.png',
-  'http://cdn.bulbagarden.net/upload/thumb/e/e3/145Zapdos.png/250px-145Zapdos.png',
-  'http://cdn.bulbagarden.net/upload/thumb/1/1b/146Moltres.png/250px-146Moltres.png',
-  'http://cdn.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/250px-133Eevee.png'
-];
-var starwars = [
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/anakinskywalkerava.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/luke_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/obi_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/Hansoloava.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/vignettes_v6/chewbacca_vignette.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/yoda_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/sidious_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/vador_avv6.JPG',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/padme_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/leia_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/anakinskywalkerava.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/luke_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/obi_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/Hansoloava.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/vignettes_v6/chewbacca_vignette.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/yoda_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/sidious_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/vador_avv6.JPG',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/padme_avv6.jpg',
-  'http://www.starwars-universe.com/images/encyclopedie/personnages/avatars_v6/leia_avv6.jpg'
-];
-var lotr = [
-  'http://lotrproject.com/char/images/150/gandalfhobbit.jpg',
-  'http://www.thelandofshadow.com/wp-content/uploads/2014/04/EyeSauron.jpg',
-  'http://www.catholiclane.com/wp-content/uploads/Aragorn-Lord-of-the-Rings-150x150.jpg',
-  'http://www.monologuedb.com/wp-content/uploads/2011/09/Orlando-Bloom-as-Legolas-in-The-Lord-of-the-Rings-The-Return-of-the-King-150x150.jpg',
-  'http://www.fantacalciopro.com/images/avatar/Gimli.jpg',
-  'http://www.tolkiendrim.com/wp-content/uploads/2012/09/Frodon1-150x150.jpg',
-  'https://i.imgflip.com/2/7dufj.jpg',
-  'https://s-media-cache-ak0.pinimg.com/736x/e7/27/31/e72731c749905e03c8a5dafc7adf59c6.jpg',
-  'http://www.tolkiendrim.com/wp-content/uploads/2012/09/Saroumane1-150x150.jpg',
-  'https://s-media-cache-ak0.pinimg.com/736x/81/76/48/817648596b0448914fdc9ed645231310.jpg',
-  'http://lotrproject.com/char/images/150/gandalfhobbit.jpg',
-  'http://www.thelandofshadow.com/wp-content/uploads/2014/04/EyeSauron.jpg',
-  'http://www.catholiclane.com/wp-content/uploads/Aragorn-Lord-of-the-Rings-150x150.jpg',
-  'http://www.monologuedb.com/wp-content/uploads/2011/09/Orlando-Bloom-as-Legolas-in-The-Lord-of-the-Rings-The-Return-of-the-King-150x150.jpg',
-  'http://www.fantacalciopro.com/images/avatar/Gimli.jpg',
-  'http://www.tolkiendrim.com/wp-content/uploads/2012/09/Frodon1-150x150.jpg',
-  'https://i.imgflip.com/2/7dufj.jpg',
-  'https://s-media-cache-ak0.pinimg.com/736x/e7/27/31/e72731c749905e03c8a5dafc7adf59c6.jpg',
-  'http://www.tolkiendrim.com/wp-content/uploads/2012/09/Saroumane1-150x150.jpg',
-  'https://s-media-cache-ak0.pinimg.com/736x/81/76/48/817648596b0448914fdc9ed645231310.jpg'
-];
-var disney = [
-  'http://www.popstickers.fr/4044-home_default/mickey.jpg', 
-  'http://rs112.pbsrc.com/albums/n185/modest_me9/mowgli.jpg~c200',
-  'https://qph.ec.quoracdn.net/main-thumb-t-29038-200-80YknGmQ2R9Hk9bEy43s7dHXNpvJtV8s.jpeg',
-  'http://img.kbhgames.com/2016/07/Tarzan-Return-to-the-Jungle.jpg',
-  'http://rs951.pbsrc.com/albums/ad356/MetallicAerin2/TLKpart3001_0001.jpg~c200',
-  'https://s-media-cache-ak0.pinimg.com/736x/c4/df/97/c4df974ed6a9144b38e31360912898eb.jpg',
-  'http://ekladata.com/aNG7q920ZA59GLvdh0SjQhXrWMs@200x200.jpg',
-  'http://ekladata.com/-jQr-XuNktvvO6f4lo3CMMVK7ew@200x200.png',
-  'http://neverpedia.com/wiki/images/thumb/2/21/DisneyPeterPan.jpg/200px-DisneyPeterPan.jpg',
-  'https://www.ecranlarge.com/media/cache/200x200/uploads/image/000/938/pinocchio-photo-pinocchio-938230.jpg',
-  'http://www.popstickers.fr/4044-home_default/mickey.jpg', 
-  'http://rs112.pbsrc.com/albums/n185/modest_me9/mowgli.jpg~c200',
-  'https://qph.ec.quoracdn.net/main-thumb-t-29038-200-80YknGmQ2R9Hk9bEy43s7dHXNpvJtV8s.jpeg',
-  'http://img.kbhgames.com/2016/07/Tarzan-Return-to-the-Jungle.jpg',
-  'http://rs951.pbsrc.com/albums/ad356/MetallicAerin2/TLKpart3001_0001.jpg~c200',
-  'https://s-media-cache-ak0.pinimg.com/736x/c4/df/97/c4df974ed6a9144b38e31360912898eb.jpg',
-  'http://ekladata.com/aNG7q920ZA59GLvdh0SjQhXrWMs@200x200.jpg',
-  'http://ekladata.com/-jQr-XuNktvvO6f4lo3CMMVK7ew@200x200.png',
-  'http://neverpedia.com/wiki/images/thumb/2/21/DisneyPeterPan.jpg/200px-DisneyPeterPan.jpg',
-  'https://www.ecranlarge.com/media/cache/200x200/uploads/image/000/938/pinocchio-photo-pinocchio-938230.jpg'
-];
-var pixar = [
-  'https://33hpwq10j9luq8gl43e62q4e-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/0GCwOihe9dZPvHZrY.jpg',
-  'https://33hpwq10j9luq8gl43e62q4e-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/0pVhAbT15R95f4YJ5.jpg',
-  'https://33hpwq10j9luq8gl43e62q4e-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/0IEMOGh02Mk2gujgz.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Remy.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Mike.jpg',
-  'https://7f9c61237bd6e732e57e-5fa18836a2ae6b5e7c49abcc89b20237.ssl.cf1.rackcdn.com/12300841_top-ten-non-human-pixar-characters_t4a51086e.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Nemo.jpg',
-  'http://img.phone.baidu.com/public/uploads/store_0/b/8/1/b81e0d3a4fd00ffe118313e8f981aef7_200x200.png',
-  'http://trus.imageg.net/graphics/corp/2934995_Image_1.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Mr-Incredible.jpg',
-  'https://33hpwq10j9luq8gl43e62q4e-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/0GCwOihe9dZPvHZrY.jpg',
-  'https://33hpwq10j9luq8gl43e62q4e-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/0pVhAbT15R95f4YJ5.jpg',
-  'https://33hpwq10j9luq8gl43e62q4e-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/0IEMOGh02Mk2gujgz.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Remy.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Mike.jpg',
-  'https://7f9c61237bd6e732e57e-5fa18836a2ae6b5e7c49abcc89b20237.ssl.cf1.rackcdn.com/12300841_top-ten-non-human-pixar-characters_t4a51086e.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Nemo.jpg',
-  'http://img.phone.baidu.com/public/uploads/store_0/b/8/1/b81e0d3a4fd00ffe118313e8f981aef7_200x200.png',
-  'http://trus.imageg.net/graphics/corp/2934995_Image_1.jpg',
-  'https://cdn3.whatculture.com/images/2011/06/Mr-Incredible.jpg'
-];
-var harryPotter = [];
+var library = {
+  pokemon: [
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980025/memory/Pokemon/Bulbasaur.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980083/memory/Pokemon/Charmander.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980101/memory/Pokemon/Squirtle.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980116/memory/Pokemon/Pikachu.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980129/memory/Pokemon/Mewtwo.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980142/memory/Pokemon/Mew.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980154/memory/Pokemon/Articuno.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980164/memory/Pokemon/Zapdos.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980175/memory/Pokemon/Moltres.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980186/memory/Pokemon/Eevee.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980025/memory/Pokemon/Bulbasaur.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980083/memory/Pokemon/Charmander.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980101/memory/Pokemon/Squirtle.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980116/memory/Pokemon/Pikachu.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980129/memory/Pokemon/Mewtwo.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980142/memory/Pokemon/Mew.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980154/memory/Pokemon/Articuno.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980164/memory/Pokemon/Zapdos.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980175/memory/Pokemon/Moltres.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980186/memory/Pokemon/Eevee.png'
+  ],
+  starwars: [
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980981/memory/starwars/anakin%20skywalker.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981009/memory/starwars/luke%20skywalker.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981022/memory/starwars/Obi%20wann.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981054/memory/starwars/Han%20solo.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981074/memory/starwars/chewbacca.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981095/memory/starwars/yoda.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981117/memory/starwars/dark%20sidious.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981141/memory/starwars/dark%20vador.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981165/memory/starwars/padme.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981190/memory/starwars/leia.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547980981/memory/starwars/anakin%20skywalker.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981009/memory/starwars/luke%20skywalker.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981022/memory/starwars/Obi%20wann.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981054/memory/starwars/Han%20solo.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981074/memory/starwars/chewbacca.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981095/memory/starwars/yoda.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981117/memory/starwars/dark%20sidious.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981141/memory/starwars/dark%20vador.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981165/memory/starwars/padme.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981190/memory/starwars/leia.jpg'
+  ],
+  lotr: [
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981408/memory/lotr/gandalf.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981438/memory/lotr/sauron.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981469/memory/lotr/Aragorn.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981501/memory/lotr/legolas.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981535/memory/lotr/Gimli.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981603/memory/lotr/golum.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981645/memory/lotr/sam.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981686/memory/lotr/saroumane.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981738/memory/lotr/bilbo.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981802/memory/lotr/frodo.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981408/memory/lotr/gandalf.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981438/memory/lotr/sauron.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981469/memory/lotr/Aragorn.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981501/memory/lotr/legolas.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981535/memory/lotr/Gimli.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981603/memory/lotr/golum.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981645/memory/lotr/sam.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981686/memory/lotr/saroumane.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981738/memory/lotr/bilbo.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547981802/memory/lotr/frodo.jpg'
+  ],
+  disney: [
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982044/memory/disney/mickey.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982088/memory/disney/mowgli.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982610/memory/disney/tarzan.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982620/memory/disney/simba.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982628/memory/disney/aladin.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982636/memory/disney/blanche%20neige.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982644/memory/disney/alice.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982653/memory/disney/peter%20pan.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982663/memory/disney/pinocchio.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982738/memory/disney/raiponce.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982044/memory/disney/mickey.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982088/memory/disney/mowgli.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982610/memory/disney/tarzan.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982620/memory/disney/simba.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982628/memory/disney/aladin.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982636/memory/disney/blanche%20neige.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982644/memory/disney/alice.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982653/memory/disney/peter%20pan.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982663/memory/disney/pinocchio.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982738/memory/disney/raiponce.jpg'
+  ],
+  pixar: [
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982971/memory/pixar/up.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982987/memory/pixar/buzz.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983000/memory/pixar/woody.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983016/memory/pixar/Remy.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983032/memory/pixar/Mike.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983077/memory/pixar/Nemo.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983114/memory/pixar/wall-e.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983169/memory/pixar/Mr-Incredible.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983381/memory/pixar/sully.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983403/memory/pixar/flash%20mcqueen.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982971/memory/pixar/up.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547982987/memory/pixar/buzz.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983000/memory/pixar/woody.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983016/memory/pixar/Remy.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983032/memory/pixar/Mike.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983077/memory/pixar/Nemo.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983114/memory/pixar/wall-e.png',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983169/memory/pixar/Mr-Incredible.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983381/memory/pixar/sully.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547983403/memory/pixar/flash%20mcqueen.jpg'
+  ],
+  harrypotter: [
+    'https://res.cloudinary.com/beumsk/image/upload/v1547998926/memory/harrypotter/harry.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547998958/memory/harrypotter/ron.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547998992/memory/harrypotter/hermione.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999106/memory/harrypotter/dumbledore.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999032/memory/harrypotter/malfoy.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999143/memory/harrypotter/voldemort.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999401/memory/harrypotter/rogue.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999196/memory/harrypotter/hagrid.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999271/memory/harrypotter/sirius.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999577/memory/harrypotter/neville.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547998926/memory/harrypotter/harry.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547998958/memory/harrypotter/ron.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547998992/memory/harrypotter/hermione.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999106/memory/harrypotter/dumbledore.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999032/memory/harrypotter/malfoy.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999143/memory/harrypotter/voldemort.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999401/memory/harrypotter/rogue.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999196/memory/harrypotter/hagrid.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999271/memory/harrypotter/sirius.jpg',
+    'https://res.cloudinary.com/beumsk/image/upload/v1547999577/memory/harrypotter/neville.jpg'
+  ]
+}
 
 var images = [],
     theme = "",
@@ -132,28 +154,33 @@ var preElt = document.querySelector("#pre"),
     timeElt = document.querySelector("#time"),
     scoreElt = document.querySelector("#score"),
     postElt = document.querySelector("#post"),
-    finalElt = document.querySelector("#final");
+    finalElt = document.querySelector("#final"),
+    againElt = document.querySelector("#again");
 
 // initiate the game with chosen theme
 for (let j=0; j<themesElts.length; j++) {
   themesElts[j].addEventListener("click", function () {
+    clearInterval(checkPageInterval);
     theme = this.id;
     // insert theme in images array
     switch (theme) {
       case "pokemon":
-        for (let i=0; i<20; i++) {images.push(pokemon[i]);}
+        for (let i=0; i<20; i++) {images.push(library.pokemon[i]);}
         break;
       case "starwars":
-        for (let i=0; i<20; i++) {images.push(starwars[i]);}
+        for (let i=0; i<20; i++) {images.push(library.starwars[i]);}
         break;
       case "lotr":
-        for (let i=0; i<20; i++) {images.push(lotr[i]);}
+        for (let i=0; i<20; i++) {images.push(library.lotr[i]);}
         break;
       case "disney":
-        for (let i=0; i<20; i++) {images.push(disney[i]);}
+        for (let i=0; i<20; i++) {images.push(library.disney[i]);}
         break;
       case "pixar":
-        for (let i=0; i<20; i++) {images.push(pixar[i]);}
+        for (let i=0; i<20; i++) {images.push(library.pixar[i]);}
+        break;
+      case "harrypotter":
+        for (let i=0; i<20; i++) {images.push(library.harrypotter[i]);}
         break;
     }
 
@@ -164,7 +191,7 @@ for (let j=0; j<themesElts.length; j++) {
       images.splice(rand, 1);
       count--;
     }
-    preElt.style.display = "none";
+    preElt.classList.add("hidden");
   });
 }
 
@@ -181,7 +208,7 @@ for (let j=0; j<document.querySelectorAll(".play").length; j++) {
       if (click === -1) {
         timer = setInterval(function() {
           time++;
-          timeElt.innerHTML = time + " sec";
+          timeElt.innerHTML = time;
         }, 1000);
       }
       click = 1;
@@ -200,7 +227,7 @@ for (let j=0; j<document.querySelectorAll(".play").length; j++) {
         if (score > 0){
           score -= 2;
         }
-        scoreElt.innerHTML = "score: " + score;
+        scoreElt.innerHTML = score;
       }
 
       // same images
@@ -211,16 +238,47 @@ for (let j=0; j<document.querySelectorAll(".play").length; j++) {
         tempElt2.firstChild.classList.add("outlined");
         tempElt1.classList.remove("play");
         tempElt2.classList.remove("play");
-        scoreElt.innerHTML = "score: " + score;
+        scoreElt.innerHTML = score;
 
         // game won
         if (win === 20) {
           clearTimeout(timer);
           finalElt.innerHTML = "You won " + score + " points <br> in " + time + " seconds";
-          postElt.style.display = "flex";
+          postElt.classList.remove("hidden");
         }
       }
       click = 0;
     }
   });
 }
+
+againElt.addEventListener("click", function() {
+  // reset game
+  theme = "";
+  count = 19;
+  rand = 0;
+  tempElt1 = "";
+  tempElt2 = "";
+  click = -1;
+  score = 0;
+  win = 0;
+  time = 0;
+  postElt.classList.add("hidden");
+  preElt.classList.remove("hidden");
+  for (let i=0; i<20; i++) {
+    boxElts[i].firstChild.classList.add("hidden");
+  }
+  timeElt.textContent = time;
+  scoreElt.textContent = score;
+});
+
+// handle focus of the page
+function checkPageFocus() {
+  if (document.hasFocus()) {
+    preElt.classList.remove("hidden");
+  }
+  else {
+    preElt.classList.add("hidden");
+  }
+}
+var checkPageInterval = setInterval(checkPageFocus, 300);

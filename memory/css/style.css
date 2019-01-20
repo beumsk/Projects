@@ -10,11 +10,11 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  text-align: center;
   background: #1abc9c;
   background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
   font-family: arial;
   position: relative;
+  text-align: center;
 }
 
 /* HEADER */
@@ -42,6 +42,7 @@ header {
   width: 250px;
   height: 345px;
   box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
+  margin: auto;
 }
 @media only screen and (min-width: 768px) {
   .main {
@@ -111,8 +112,15 @@ img {
 #time {
   float: left;
 }
+#time::after {
+  content: " sec";
+}
+
 #score {
   float: right;
+}
+#score::after {
+  content: " points";
 }
 
 /* FOOTER */
@@ -133,7 +141,7 @@ footer p a:hover {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 .show {
   display: block;
@@ -144,19 +152,22 @@ footer p a:hover {
 
 /* PRE modal window */
 #pre {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 #themes {
-  width: 280px;
-  padding: 20px;
+  margin: auto;
+  padding: 25px 20px;
+  width: 250px;
   background: whitesmoke;
   color: #36a7a2;
   font-weight: bold;
@@ -166,7 +177,7 @@ footer p a:hover {
 
 #themes p {
   margin: 10px auto;
-  padding: 5px;
+  padding: 5px 40px;
   border: solid #36a7a2 1px;
   border-radius: 2px;
   background: whitesmoke;
@@ -188,10 +199,11 @@ footer p a:hover {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
 }
 
 #post > div {
@@ -209,7 +221,7 @@ footer p a:hover {
   padding: 10px 20px;
 }
 
-#post #again a {
+#post #again {
   color: #36a7a2;
   text-decoration: none;
   margin: auto;
@@ -218,7 +230,7 @@ footer p a:hover {
   border: solid #36a7a2 1px;
   border-radius: 2px;
 }
-#post #again a:hover {
+#post #again:hover {
   background: #27ae60;
   background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
   background-size: 250%;

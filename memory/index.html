@@ -44,8 +44,8 @@
   <div class="box play"></div>
   
   <div id="state">
-    <span id="time">sec</span>
-    <span id="score">Score: 0</span>
+    <span id="time">0</span>
+    <span id="score">0</span>
   </div>
 </section>
 
@@ -55,7 +55,7 @@
 </footer>
 
 <!-- PRE -->
-<section id="pre">
+<section id="pre" class="hidden">
   <div id="themes">
     Chose your theme !
     <p id="pokemon" class="themes" title="Pokemon">Pokemon</p>
@@ -63,17 +63,18 @@
     <p id="lotr" class="themes" title="Lord of the Ring">Lord of the Ring</p>
     <p id="disney" class="themes" title="Disney">Disney</p>
     <p id="pixar" class="themes" title="Pixar">Pixar</p>
+    <p id="harrypotter" class="themes" title="Harry Potter">Harry Potter</p>
   </div>
 </section>
 
 <!-- POST -->
-<section id="post">
+<section id="post" class="hidden">
   <div>
     <p>BRAVO !</p>
     <p id="final"></p>
     <br>
-    <p id="again">
-      <a onclick="document.location.reload(true);">Play Again !</a>
+    <p>
+      <a id="again">Play Again !</a>
     </p>
   </div>
 </section>
