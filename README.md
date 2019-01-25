@@ -18,6 +18,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/javascript-clock" target="_blank">Javascript Clock</a></li>
     <li><a href="https://beumsk.github.io/Projects/loader" target="_blank">Loader</a></li>
     <li><a href="https://beumsk.github.io/Projects/memory" target="_blank">Memory</a></li>
+    <li><a href="https://beumsk.github.io/Projects/minesweeper" target="_blank">Minesweeper</a></li>
     <li><a href="https://beumsk.github.io/Projects/pac-man-css" target="_blank">Pac Man CSS</a></li>
     <li><a href="https://beumsk.github.io/Projects/pokemon" target="_blank">Pokemon</a></li>
     <li><a href="https://beumsk.github.io/Projects/pomodoro-clock" target="_blank">Pomodoro Clock</a></li>
