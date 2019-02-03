@@ -10,8 +10,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: arial;
   min-height: 100vh;
+  font-family: arial;
   background: #2ecc71;
   background-image: linear-gradient(to top left, #2980b9, #16a085, #2ecc71);
   position: relative;
@@ -59,12 +59,12 @@ header {
   }
 }
 
-.snake {
-  background: #16a085;
-}
-
 .food {
   background: #8e44ad;
+}
+
+.snake {
+  background: #16a085;
 }
 
 /* bar showing status below table */
@@ -95,6 +95,10 @@ header {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* modular window before and after game */
 .modul {
   display: flex;
@@ -112,7 +116,7 @@ header {
 .start {
   background: rgba(256,256,256,1);
   padding: 40px 50px;
-  margin: auto;
+/*   margin: auto; */
   width: 240px;
   box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
 }
