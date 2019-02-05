@@ -19,7 +19,7 @@ body {
   font: 36px Arial;
   letter-spacing: 0.1em;
   padding: 10px 5px;
-  color: rgba(256, 256, 256, 0.5);
+  color: rgba(256, 256, 256, 0.8);
 }
 @media only screen and (min-width: 768px) {
   .title {
@@ -35,6 +35,7 @@ body {
   position: relative;
   background: rgba(256, 256, 256, 0.25);
   cursor: pointer;
+  margin: auto;
 }
 @media only screen and (min-width: 768px) and (min-height: 540px) {
   .clock {
@@ -66,8 +67,11 @@ body {
   border-radius: 0 0 5px 5px;
   background: #333;
   z-index: 4;
-  transform-origin: 2.5px 37.5px;
+  -webkit-transform-origin: 2.5px 37.5px;
+          transform-origin: 2.5px 37.5px;
+  transition: -webkit-transform 2s ease;
   transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
 }
 @media only screen and (min-width: 768px) and (min-height: 540px) {
   .hour {
@@ -75,7 +79,8 @@ body {
     left: calc(50% - 2.5px);
     width: 5px;
     height: 60px;
-    transform-origin: 2.5px 57.5px;
+    -webkit-transform-origin: 2.5px 57.5px;
+            transform-origin: 2.5px 57.5px;
   }
 }
 
@@ -87,8 +92,11 @@ body {
   border-radius: 0 0 5px 5px;
   background: rgba(167, 139, 131, 1);
   z-index: 3;
-  transform-origin: 2.5px 67.5px;
+  -webkit-transform-origin: 2.5px 67.5px;
+          transform-origin: 2.5px 67.5px;
+  transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 @media only screen and (min-width: 768px) and (min-height: 540px) {
   .min {
@@ -96,7 +104,8 @@ body {
     left: calc(50% - 2.5px);
     width: 5px;
     height: 105px;
-    transform-origin: 2.5px 102.5px;
+    -webkit-transform-origin: 2.5px 102.5px;
+            transform-origin: 2.5px 102.5px;
   }
 }
 
@@ -108,8 +117,11 @@ body {
   border-radius: 0 0 2.5px 2.5px;
   background: rgba(231, 76, 60, 1);
   z-index: 2;
-  transform-origin: 1.25px 78.75px;
+  -webkit-transform-origin: 1.25px 78.75px;
+          transform-origin: 1.25px 78.75px;
+  transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 @media only screen and (min-width: 768px) and (min-height: 540px) {
   .sec {
@@ -117,7 +129,8 @@ body {
     left: calc(50% - 1.25px);
     width: 2.5px;
     height: 120px;
-    transform-origin: 1.25px 118.75px;
+    -webkit-transform-origin: 1.25px 118.75px;
+            transform-origin: 1.25px 118.75px;
   }
 }
 
@@ -145,15 +158,15 @@ body {
 
 footer {
   font: 14px Arial;
-  color: rgba(256, 256, 256, 0.5);
+  color: rgba(256, 256, 256, 0.8);
   width: 100vw;
   padding: 5px;
 }
 footer a {
-  color: rgba(51, 51, 51, 0.75);
+  color: rgba(51, 51, 51, 0.85);
   text-decoration: none;
 }
 footer a:hover {
-  color: rgba(256, 256, 256, 0.5);
+  color: rgba(256, 256, 256, 0.8);
   text-decoration: underline;
 }
