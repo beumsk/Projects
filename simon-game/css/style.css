@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 html {
@@ -24,7 +28,7 @@ body {
 header {
   color: #9b59b6;
   font-size: 20px;
-  padding: 20px 10px;
+  padding: 10px 5px;
   letter-spacing: 6px;
   text-shadow: 1px 1px #fff, 2px 2px #333;
 }
@@ -40,6 +44,10 @@ section {
   margin: auto;
   border-radius: 100%;
   position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (min-width:768px) and (min-height: 560px) {
   section {
@@ -51,13 +59,18 @@ section {
 #center {
   height: 150px;
   width: 150px;
-  float: left;
   background: #9b59b6;
   position: absolute;
   left: 75px;
   top: 75px;
   border-radius: 100%;
   border: solid #333 4px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  align-content: space-around;
+  padding: 20px;
 }
 @media only screen and (min-width:768px) and (min-height: 560px) {
   #center {
@@ -68,88 +81,90 @@ section {
   }
 }
 
-input {
+#center input {
   width: 60px;
+  height: 24px;
+  margin: 0 calc(100% - 60px);
   font-size: 18px;
   text-align: center;
-  margin: 20px auto 10px;
   border-radius: 5px;
-  border: none;
   border: solid 2px #333;
 }
-@media only screen and (min-width:768px) and (min-height: 560px) {
-  input {
+@media only screen and (min-width: 768px) and (min-height: 560px) {
+  #center input {
     font-size: 25px;
-    margin-top: 25px;
+    height: 30px;
   }
 }
 
-#start, #strict {
-  width: 60px;
-  margin: 5px auto;
+#basic, 
+#strict {
+  width: 46px;
+  height: 24px;
   padding: 2px;
   border-radius: 5px;
   cursor: pointer;
-  display: inline-block;
   border: solid #333 2px;
-}
-@media only screen and (min-width:768px) and (min-height: 560px) {
-  #start, #strict {
-    margin: 15px auto;
-    padding: 5px 10px;
-  }
-}
-.unclicked {
   background: #333;
   color: whitesmoke;
+  font: 400 13.3333px Arial;
 }
-.start-strict {
+@media only screen and (min-width: 768px) and (min-height: 560px) {
+  #basic, 
+  #strict {
+    width: 60px;
+    padding: 5px 10px;
+    height: 30px;
+  }
+}
+
+#basic.active, 
+#strict.active {
   background: whitesmoke;
   color: #333;
 }
 
 #on-off {
-  margin: 10px auto;
+  height: 24px;
+  margin: auto calc(100% - 120px);
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+@media only screen and (min-width: 768px) and (min-height: 560px) {
+  #on-off {
+    height: 30px;
+  }
 }
 
-.da {
+#on-off.glow {
+  -webkit-animation: glowing 2s infinite;
+          animation: glowing 2s infinite;
+}
+@-webkit-keyframes glowing {
+  100% { box-shadow: 0 0 2px 2px yellow; }
+}
+@keyframes glowing {
+  100% { box-shadow: 0 0 2px 2px yellow; }
+}
+
+.switch {
   background: #333;
-  display: inline-block;
   border: solid 2px #333;
-}
-
-#on {
-  border-radius: 5px 0 0 5px;
-}
-
-.on {
-  background: #388E3C;
-}
-
-#off {
-  border-radius: 0 5px 5px 0;
-}
-
-.off {
-  background: #D32F2F;
-}
-
-#on, #off {
-  width: 30px;
-  height: 10px;
-  padding: 5px 15px;
+  width: 20px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
-.active {
-  background: whitesmoke;
-  color: #333;
-}
+#on { border-radius: 5px 0 0 5px; }
+#on.active { background: #388E3C; }
+
+#off { border-radius: 0 5px 5px 0; }
+#off.active { background: #D32F2F; }
 
 .colors {
   height: 150px;
   width: 150px;
-  float: left;
   cursor: pointer;
   box-shadow: none;
   border: solid #333 4px;
@@ -169,30 +184,35 @@ input {
   border-radius: 100% 0 0 0;
   border-width: 8px 2px 2px 8px;
 }
+#green.active { background: #2ecc71; }
 
 #red {
   background: #c0392b;
   border-radius: 0 100% 0 0;
   border-width: 8px 8px 2px 2px;
 }
+#red.active { background: #e74c3c; }
 
 #yellow {
   background: #f39c12;
   border-radius: 0 0 0 100%;
   border-width: 2px 2px 8px 8px;
 }
+#yellow.active { background: #f1c40f; }
 
 #blue {
   background: #2980b9;
   border-radius: 0 0 100% 0;
   border-width: 2px 8px 8px 2px;
 }
+#blue.active { background: #3498db; }
 
 footer {
   color: #9b59b6;
   font-size: 14px;
   clear: left;
-  padding: 10px;
+  padding: 5px;
+  background: rgba(256,256,256,0.7);
 }
 
 footer a {
