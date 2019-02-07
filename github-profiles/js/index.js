@@ -18,23 +18,32 @@ function ajaxGet(url, callback) {
 
 // Get user value on click
 document.querySelector("form").addEventListener("submit", function (e) { 
-  user = document.getElementById("user").value;
+  user = document.querySelector("#user").value;
   e.preventDefault();
   // Request API
   ajaxGet("https://api.github.com/users/" + user, function (answer) { 
-    var profile = JSON.parse(answer);	
-    img = document.createElement("img"); // Avatar
+    var profile = JSON.parse(answer);
+    
+    // Avatar
+    img = document.querySelector("img");
     img.src = profile.avatar_url;
-    img.style.height = "200px";
-    h1 = document.createElement("h1"); // Pseudo
+    
+    // Pseudo
+    h1 = document.createElement("h1");
     h1.innerHTML = "<a href='" + profile.html_url + "' target='_blank'>" + profile.name + "</a>";
-    h3 = document.createElement("h3"); // Location
+    
+    // Location
+    h3 = document.createElement("h3");
     h3.innerHTML = profile.location;
-    p = document.createElement("p"); // Website
+    
+    // Website
+    p = document.createElement("p");
     if (profile.blog !== null) {
       p.innerHTML = "<a href='" + profile.blog + "' target='_blank'>" + profile.blog + "</a>";
     }
-    var profile = document.getElementById("profile");
+    
+    //
+    var profile = document.querySelector("#profile");
     profile.innerHTML = ""; // empty previous search (and remove github logo)
     profile.appendChild(img);
     profile.appendChild(h1);
