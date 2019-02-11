@@ -1,5 +1,4 @@
 
-// prevent food from popping on snake <> new food is unseen until snake moves from food box TESTIT!!
 // ADD time?
 // increase speed over time/food
 
@@ -35,7 +34,6 @@ var snake = {
 
 // init game
 snake.init();
-
 
 start.addEventListener("click", startSnake);
 
@@ -112,7 +110,7 @@ function hitBorder() {
   var headPos = snake.position.length-1;
   // goes of limits
   if (((snake.position[headPos][0] === table.rowsCols-1) && (snake.direction === "right")) || ((snake.position[headPos][0] === 0) && (snake.direction === "left")) || ((snake.position[headPos][1] === table.rowsCols-1) && (snake.direction === "down")) ||  ((snake.position[headPos][1] === 0) && (snake.direction === "up"))) {
-    console.log("border hit");
+    // console.log("border hit");
     stopp();
   }
 }
@@ -122,7 +120,7 @@ function hitSnake() {
   var headPos = snake.position.length-1;
   for (var i=0; i<headPos; i++) {
     if (snake.position[headPos].toString() === snake.position[i].toString()) {
-      console.log("snake hit");
+      // console.log("snake hit");
       stopp();
     }
   } 
@@ -145,11 +143,13 @@ function hitFood() {
 function randomFood() {
   var randomX = Math.floor(Math.random() * table.rowsCols);
   var randomY = Math.floor(Math.random() * table.rowsCols);
-  while (snake.position.indexOf([randomX, randomY]) !== -1) {
+  random = randomX + randomY * table.rowsCols;
+  // picks another foodPos if food pops on snake
+  while (boxes[random].classList.contains("snake")) {
     randomX = Math.floor(Math.random() * table.rowsCols);
     randomY = Math.floor(Math.random() * table.rowsCols);
-  }
-  random = randomX + randomY * table.rowsCols;
+    random = randomX + randomY * table.rowsCols;
+  }  
   boxes[random].classList.add("food");
   foodPos = [randomX, randomY];
 }
