@@ -1,11 +1,11 @@
 
 // check other info returned by the API ???
 
-var $form = $("form"),
-    $search = $(".search"),
-    $clear = $(".clear"),
-    $giphy = $(".giphy img"),
-    $giphyLink = $(".giphy a");
+var $form = $("form");
+var $search = $(".search");
+var $clear = $(".clear");
+var $giphy = $(".giphy img");
+var $giphyLink = $(".giphy a");
 
 // launch function on form submit
 $form.on("submit", function(e) {

@@ -35,6 +35,18 @@ form .search, form .btn {
   border: 1px solid white;
 }
 
+::-webkit-input-placeholder {
+  color: #f5f5f5;
+}
+
+:-ms-input-placeholder {
+  color: #f5f5f5;
+}
+
+::-ms-input-placeholder {
+  color: #f5f5f5;
+}
+
 ::placeholder {
   color: #f5f5f5;
 }
