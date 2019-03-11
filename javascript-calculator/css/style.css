@@ -8,8 +8,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: center;
   font-family: Arial;
   background: #D54F58;
   background-image: linear-gradient(to top left, #c0392b, #e74c3c , #9b59b6);
@@ -61,6 +61,7 @@ header h1 {
 }
 
 .button {
+  display: inline-block;
   box-shadow: 3px 3px 3px 1px black;
   color: #2c3e50;
   margin: 5px 0;

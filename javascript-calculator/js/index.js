@@ -1,4 +1,6 @@
 
+// add keypress events to put data
+
 var operationElts = document.querySelectorAll(".number, .operator"),
     clearElt = document.querySelector("#clear"),
     equalElt = document.querySelector("#equal"),
