@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-  background: url('https://images3.alphacoders.com/273/thumb-1920-273289.jpg') no-repeat;
+  background: url('https://res.cloudinary.com/beumsk/image/upload/v1520767362/back-pika.jpg') no-repeat;
   background-position: bottom left;
   background-size: cover;
   color: whitesmoke;
@@ -43,10 +43,10 @@ h1 {
 
 /* rotation animation on click */
 @keyframes rotation {
-  100% {transform: rotate(360deg);}
+  100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 @-webkit-keyframes rotation {
-  100% {transform: rotate(360deg);}
+  100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 .animated {
   animation: rotation 1s linear;
