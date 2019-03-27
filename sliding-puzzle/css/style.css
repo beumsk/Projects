@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   font-family: Arial;
   background: linear-gradient(to bottom right, #e53935, #5e35b1);
+  text-align: center;
 }
 
 header {
@@ -30,6 +31,7 @@ header {
   min-height: 302px;
   box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.3);
   border: solid 1px white;
+  margin: auto;
 }
 .puzzle .items {
   display: inline;
