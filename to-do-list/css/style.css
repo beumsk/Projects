@@ -12,20 +12,22 @@ body {
   align-items: center;
   font-family: arial;
   background: #2c3e50;
+  text-align: center;
 }
 
 .main {
-  margin: 20px 10px;
+  padding-top: 20px;
 }
 @media only screen and (min-width: 780px) {
   .main {
-    margin: 40px 20px;
+    padding-top: 40px;
   }
 }
 
 /* TOP */
 #top {
   padding: 20px;
+  margin: auto;
   background: #e74c3c;
   width: 368px;
   text-align: center;
@@ -76,6 +78,7 @@ button:hover {
 /* BOTTOM */
 #bottom {
   width: 368px;
+  margin: auto;
   padding: 20px;
   background: #ecf0f1;
 }
