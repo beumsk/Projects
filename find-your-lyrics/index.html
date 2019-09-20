@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Find your Lyrics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+  <h1>Find your Lyrics</h1>
+</header>
+
+<main class="container">  
+  <div class="search">
+    <label for="input" class="sr-only">Type a song title or artist you want the lyrics from</label>
+    <input type="text" name="song" class="form-control" autofocus="autofocus" placeholder="Type a song title or artist you want the lyrics from" id="input" />
+    <ul class="results list-group" id="results">
+    </ul>
+  </div>
+
+  <div class="lyrics jumbotron" id="lyrics">
+  </div>
+</main>
+
+<br>
+
+<footer>
+  <p>Created by <a href="https://remybeumier.be" target="_blank">Rémy Beumier</a> with <a href="https://lyricsovh.docs.apiary.io/" target="_blank">Lyrics.ovh</a></p>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
