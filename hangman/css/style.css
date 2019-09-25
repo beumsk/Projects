@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial;
+}
+
+header h1 {
+  font-weight: normal;
+  padding: 20px;
+  letter-spacing: 0.1em;
+}
+
+main {
+  min-width: 100px;
+  max-width: 400px;
+  margin: auto;
+}
+
+main .alphabet span {
+  border: solid 1px;
+/*   padding: 2px 5px; */
+  margin: 4px 2px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+
+.green {
+  background: #43a047;
+  color: white;
+  border-color: #43a047 !important;
+}
+
+.red{
+  background: #e53935;
+  color: white;
+  border-color: #e53935 !important;
+}
+
+main .alphabet span:not(.green):not(.red):hover {
+  background: lightgray;
+  cursor: pointer;
+}
+
+main .word {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-transform: capitalize;
+}
+
+.hidden {
+  display: none;
+}
+
+.word > span {
+  display: inline-block;
+  margin: 10px;
+  width: 30px;
+  border-bottom: solid 2px black;
+  color: white;
+}
+
+.word > span.found {
+  color: black;
+}
+
+button {
+  border: solid 1px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+footer {
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #666;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #000;
+}
