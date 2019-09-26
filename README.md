@@ -15,6 +15,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/find-your-lyrics" target="_blank">Find your Lyrics</a></li>
     <li><a href="https://beumsk.github.io/Projects/giphy-search/" target="_blank">Giphy Search</a></li>
     <li><a href="https://beumsk.github.io/Projects/github-profiles" target="_blank">Github Profiles</a></li>
+    <li><a href="https://beumsk.github.io/Projects/hangman" target="_blank">Hangman</a></li>
     <li><a href="https://beumsk.github.io/Projects/javascript-calculator" target="_blank">Javascript Calculator</a></li>
     <li><a href="https://beumsk.github.io/Projects/javascript-clock" target="_blank">Javascript Clock</a></li>
     <li><a href="https://beumsk.github.io/Projects/loader" target="_blank">Loader</a></li>
