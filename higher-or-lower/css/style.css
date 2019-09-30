@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial;
+}
+
+header h1 {
+  font-weight: normal;
+  padding: 20px;
+  letter-spacing: 0.1em;
+}
+
+main {
+  
+}
+
+.tuto {
+  margin: 20px auto;
+}
+
+.streak {
+  font-size: 24px;
+  margin: 20px auto;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: black;
+  color: white;
+}
+
+.card {
+  width: 200px;
+  height: 282px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  transition: all 0.8s;
+  transition-delay: -0.4s;
+}
+
+button {
+  margin: 0 auto 20px;
+  padding: 4px 8px;
+  background: white;
+  border: solid 1px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+footer {
+  font-size: 14px;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #666;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #000;
+}
