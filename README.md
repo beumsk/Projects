@@ -27,6 +27,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/pokemon" target="_blank">Pokemon</a></li>
     <li><a href="https://beumsk.github.io/Projects/pomodoro-clock" target="_blank">Pomodoro Clock</a></li>
     <li><a href="https://beumsk.github.io/Projects/random-quotes" target="_blank">Random Quotes</a></li>
+    <li><a href="https://beumsk.github.io/Projects/random-dad-jokes" target="_blank">Random Dad Jokes</a></li>
     <li><a href="https://beumsk.github.io/Projects/rocket-launch" target="_blank">Rocket Launch</a></li>
     <li><a href="https://beumsk.github.io/Projects/sharing-links" target="_blank">Sharing Links</a></li>
     <li><a href="https://beumsk.github.io/Projects/shi-fu-mi" target="_blank">Shi Fu Mi</a></li>
