@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: arial;
+  background: #2c3e50;
+  text-align: center;
+}
+
+.main {
+  padding-top: 20px;
+}
+@media only screen and (min-width: 780px) {
+  .main {
+    padding-top: 40px;
+  }
+}
+
+/* TOP */
+#top {
+  padding: 20px;
+  margin: auto;
+  background: #e74c3c;
+  width: 368px;
+  text-align: center;
+  border-bottom: solid 1px rgba(0, 0, 0, .5);
+}
+@media only screen and (min-width: 780px) {  
+  #top {
+    width: 600px;
+  }
+}
+
+h1 {
+  padding: 10px;
+  color: #ecf0f1;
+  font-size: 32px;
+  letter-spacing: 0.2em;
+  text-shadow: 1px 1px #333;
+}
+@media only screen and (min-width: 780px) {    
+  h1 {
+    font-size: 42px;
+  }
+}
+
+button, input {
+  height: 30px;
+  padding: 0 10px;
+  background: #ecf0f1;
+  border: none;
+  border-radius: 0;
+  color: #2c3e50;
+}
+@media only screen and (min-width: 780px) {    
+  button, input {
+    font-size: 18px;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: color 0.6s ease, background 0.6s ease;
+}
+button:hover {
+  color: #ecf0f1;
+  background: #2c3e50;
+}
+
+/* BOTTOM */
+#bottom {
+  width: 368px;
+  margin: auto;
+  padding: 20px;
+  background: #ecf0f1;
+}
+@media only screen and (min-width: 780px) {      
+  #bottom {
+    width: 600px;
+  }
+}
+
+.elt {
+  margin: 10px 0;
+  padding: 5px 10px;
+  background: #e74c3c;
+  color: whitesmoke;
+  text-decoration: none;
+/*   display: none; */
+}
+@media only screen and (min-width: 780px) {        
+  .elt {
+    padding: 7.5px 15px;
+    font-size: 18px;
+  }
+}
+
+.crossed {
+  text-decoration: line-through;
+  background: darkgrey;
+}
+
+span {
+  display: box;
+  position: relative;
+  margin: -5px -10px;
+  padding: 5px 10px;
+  float: right;
+  cursor: pointer;
+  transition: background 0.6s ease;
+}
+@media only screen and (min-width: 780px) {          
+  span {
+    margin: -7.5px -15px;
+    padding: 7.5px 15px;
+  }
+}
+span:hover {
+  background: #2c3e50;
+}
+
+/* FOOTER */
+footer {
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  color: #ecf0f1;
+}
+footer a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ecf0f1;
+  text-decoration: underline;
+}

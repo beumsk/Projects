@@ -1,51 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" >
-
 <head>
   <meta charset="UTF-8">
-  <title>Giphy Search</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+  <title>To Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
 
-  
 </head>
-
 <body>
-
-  
-<header>
-  <h1>Giphy Search</h1>
-  
-  <form action="" method="post">
-    <label for="" style="display: none;">Search</label>
-    <input class="search" type="text" name"search" placeholder="Search" required>
-    <input class="btn" type="submit" value="OK">
-    <input class="btn clear" value="Clear" readonly>
-  </form>
-</header>
-
-<section>
-  <div class="giphy">
-    <a href="https://giphy.com/" target="_blank">
-      <img src="https://res.cloudinary.com/beumsk/image/upload/v1520544016/giphy-logo-6611-s-_vme7aa.png" alt="giphy">
-    </a>
+<!-- partial:index.partial.html -->
+<section class="main">
+  <div id="top">
+    <h1>To Do List</h1>
+    <form autocomplete="off">
+      <input id="inp" type="text" placeholder="Type list element here" required>
+      <button id="button" title="Add element">Add</button>
+    </form>
   </div>
+
+  <div id="bottom"></div>
 </section>
 
-<footer>
-  <p>Created by <a href="https://remybeumier.be" target="_blank">Rémy Beumier</a> with <a href="https://developers.giphy.com/docs/" target="_blank">Giphy API</a></p>
-</footer>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-  
-
-    <script src="js/index.js"></script>
-
-
-
+<footer>Created by <a href="https://remybeumier.be" target="_blank">Rémy Beumier</a></footer>
+<!-- partial -->
+  <script  src="./script.js"></script>
 
 </body>
-
 </html>
