@@ -8,6 +8,7 @@ To reach Github versions:
   <ul>
     <li><a href="https://beumsk.github.io/Projects/advent-calendar" target="_blank">Advent Calendar</a></li>
     <li><a href="https://beumsk.github.io/Projects/android-guy" target="_blank">Android Guy</a></li>
+    <li><a href="https://beumsk.github.io/Projects/brick-breaker" target="_blank">Brick Breaker</a></li>
     <li><a href="https://beumsk.github.io/Projects/carousel" target="_blank">Carousel</a></li>
     <li><a href="https://beumsk.github.io/Projects/date-counter" target="_blank">Date Counter</a></li>
     <li><a href="https://beumsk.github.io/Projects/drum-machine" target="_blank">Drum Machine</a></li>
@@ -34,6 +35,7 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/simon-game" target="_blank">Simon Game</a></li>
     <li><a href="https://beumsk.github.io/Projects/sliding-puzzle" target="_blank">Sliding Puzzle</a></li>
     <li><a href="https://beumsk.github.io/Projects/snake" target="_blank">Snake</a></li>
+    <li><a href="https://beumsk.github.io/Projects/tetris" target="_blank">Tetris</a></li>
     <li><a href="https://beumsk.github.io/Projects/tic-tac-toe" target="_blank">Tic Tac Toe</a></li>
     <li><a href="https://beumsk.github.io/Projects/to-do-list" target="_blank">To Do List</a></li>
     <li><a href="https://beumsk.github.io/Projects/whack-a-donkey-kong/" target="_blank">Whack a Donkey Kong</a></li>
