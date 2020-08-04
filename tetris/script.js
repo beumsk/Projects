@@ -1,7 +1,7 @@
+// fix space bar moveBottom() morking weird with line -> next piece appears too low
+// change tetrominoes appearing -> only first block, not full shape !!
 // add mobile swipe
-// total bottom with space bar
-// change tetrominoes appearing -> only first block, not full shape
-// add reversed tetrominoes
+
 
 var screen = document.querySelector("#screen");
 var previewScreen = document.querySelector("#preview-screen");
@@ -28,21 +28,37 @@ let timerId;
 let speed = 500;
 let score = 0;
 let started = false;
-const colors = ["#e53935", "#fdd835", "#43a047", "#3949ab", "#8e24aa"];
+let over = false;
+const colors = ["#e53935", "#fb8c00", "#fdd835", "#43a047", "#00acc1", "#3949ab", "#8e24aa"];
+// red, orange, yellow, green, cyan, indigo, purple
 
 // the tetrominoes
 const lt = [
+[1, width + 1, width * 2 + 1, width * 2 + 2],
+[width, width + 1, width + 2, width * 2],
+[0, 1, width + 1, width * 2 + 1],
+[2, width, width + 1, width + 2]];
+
+
+const jt = [
 [1, width + 1, width * 2 + 1, 2],
 [width, width + 1, width + 2, width * 2 + 2],
 [1, width + 1, width * 2 + 1, width * 2],
-[width, width * 2, width * 2 + 1, width * 2 + 2]];
+[0, width, width + 1, width + 2]];
+
+
+const st = [
+[1, width + 1, width + 2, width * 2 + 2],
+[width + 1, width + 2, width * 2, width * 2 + 1],
+[1, width + 1, width + 2, width * 2 + 2],
+[width + 1, width + 2, width * 2, width * 2 + 1]];
 
 
 const zt = [
-[0, width, width + 1, width * 2 + 1],
-[width + 1, width + 2, width * 2, width * 2 + 1],
-[0, width, width + 1, width * 2 + 1],
-[width + 1, width + 2, width * 2, width * 2 + 1]];
+[2, width + 1, width + 2, width * 2 + 1],
+[width, width + 1, width * 2 + 1, width * 2 + 2],
+[2, width + 1, width + 2, width * 2 + 1],
+[width, width + 1, width * 2 + 1, width * 2 + 2]];
 
 
 const tt = [
@@ -53,10 +69,10 @@ const tt = [
 
 
 const ot = [
-[0, 1, width, width + 1],
-[0, 1, width, width + 1],
-[0, 1, width, width + 1],
-[0, 1, width, width + 1]];
+[1, 2, width + 1, width + 2],
+[1, 2, width + 1, width + 2],
+[1, 2, width + 1, width + 2],
+[1, 2, width + 1, width + 2]];
 
 
 const it = [
@@ -66,9 +82,9 @@ const it = [
 [width, width + 1, width + 2, width + 3]];
 
 
-const tetrominoes = [lt, zt, tt, ot, it];
+const tetrominoes = [lt, jt, st, zt, tt, ot, it];
 
-let currentPosition = 4;
+let currentPosition = 3;
 let currentRotation = 0;
 
 let random = Math.floor(Math.random() * tetrominoes.length);
@@ -106,7 +122,7 @@ function control(e) {
   if (e.keyCode === 32) {
     console.log("space -> move bottom");
     e.preventDefault();
-    // moveDown();
+    moveBottom();
   } else
   if (e.keyCode === 27) {
     startPause();
@@ -123,6 +139,15 @@ function moveDown() {
   freeze();
 }
 
+function moveBottom() {
+  while (!current.some(index => squares[currentPosition + index + width].classList.contains("taken"))) {
+    undraw();
+    currentPosition += width;
+    draw();
+  }
+  freeze();
+}
+
 //freeze when tetromino touches taken square
 function freeze() {
   if (current.some(index => squares[currentPosition + index + width].classList.contains("taken"))) {
@@ -131,7 +156,7 @@ function freeze() {
     random = nextRandom;
     nextRandom = Math.floor(Math.random() * tetrominoes.length);
     current = tetrominoes[random][currentRotation];
-    currentPosition = 4;
+    currentPosition = 3;
     draw();
     displayShape();
     addScore();
@@ -142,8 +167,7 @@ function freeze() {
 // move tetromino left if room
 function moveLeft() {
   undraw();
-  const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
-  if (!isAtLeftEdge) {
+  if (!isAtLeft()) {
     currentPosition -= 1;
   }
   if (current.some(index => squares[currentPosition + index].classList.contains("taken"))) {
@@ -152,27 +176,52 @@ function moveLeft() {
   draw();
 }
 
+function isAtLeft() {
+  return current.some(index => (currentPosition + index) % width === 0);
+}
+
 // move tetromino right if room
 function moveRight() {
   undraw();
-  const isAtRightEdge = current.some(index => (currentPosition + index) % width === width - 1);
-  if (!isAtRightEdge) {
+  if (!isAtRight()) {
     currentPosition += 1;
   }
   if (current.some(index => squares[currentPosition + index].classList.contains("taken"))) {
     currentPosition -= 1;
   }
   draw();
+}
+
+function isAtRight() {
+  return current.some(index => (currentPosition + index + 1) % width === 0);
+}
+
+// FIX ROTATION OF TETROMINOS A THE EDGE --> https://github.com/kubowania/Tetris-Basic/commit/c7e804e936c0624c947116a9c83b67005c257d94
+function checkRotatedPosition(P) {
+  P = P || currentPosition;
+  if ((P + 1) % width < 4) {
+    if (isAtRight()) {
+      currentPosition += 1;
+      checkRotatedPosition(P);
+    }
+  } else
+  if (P % width > 5) {
+    if (isAtLeft()) {
+      currentPosition -= 1;
+      checkRotatedPosition(P);
+    }
+  }
 }
 
 // rotate tetromino
 function rotate() {
   undraw();
   currentRotation++;
-  if (currentRotation === current.length) {
+  if (currentRotation === tetrominoes[random].length) {
     currentRotation = 0;
   }
   current = tetrominoes[random][currentRotation];
+  checkRotatedPosition();
   draw();
 }
 
@@ -182,10 +231,12 @@ const displayWidth = 4;
 const displayIndex = 0;
 
 const upNextTetrominoes = [
-[1, displayWidth + 1, displayWidth * 2 + 1, 2], //lTetromino
-[0, displayWidth, displayWidth + 1, displayWidth * 2 + 1], //zTetromino
+[1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 2 + 2], //lTetromino
+[1, displayWidth + 1, displayWidth * 2 + 1, 2], //jTetromino
+[1, displayWidth + 1, displayWidth + 2, displayWidth * 2 + 2], //sTetromino
+[2, displayWidth + 1, displayWidth + 2, displayWidth * 2 + 1], //zTetromino
 [1, displayWidth, displayWidth + 1, displayWidth + 2], //tTetromino
-[0, 1, displayWidth, displayWidth + 1], //oTetromino
+[1, 2, displayWidth + 1, displayWidth + 2], //oTetromino
 [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1] //iTetromino
 ];
 
@@ -207,7 +258,7 @@ function startPause() {
     clearInterval(timerId);
     timerId = null;
     startEl.innerHTML = "Play";
-    document.removeEventListener("keyup", control);
+    // document.removeEventListener("keyup", control);
   }
   // resume
   else if (started) {
@@ -216,8 +267,9 @@ function startPause() {
       timerId = setInterval(moveDown, speed);
       document.addEventListener("keyup", control);
     }
-    // play
-    else {
+    // restart
+    else if (over) {
+        resetGame();
         started = true;
         startEl.innerHTML = "Pause";
         draw();
@@ -226,6 +278,16 @@ function startPause() {
         displayShape();
         document.addEventListener("keyup", control);
       }
+      // play
+      else {
+          started = true;
+          startEl.innerHTML = "Pause";
+          draw();
+          timerId = setInterval(moveDown, speed);
+          nextRandom = Math.floor(Math.random() * tetrominoes.length);
+          displayShape();
+          document.addEventListener("keyup", control);
+        }
 }
 
 startEl.addEventListener("click", e => {
@@ -253,12 +315,28 @@ function addScore() {
 
 function gameOver() {
   if (current.some(index => squares[currentPosition + index].classList.contains("taken"))) {
-    scoreEl.innerHTML = "end";
+    scoreEl.innerHTML = "X";
     clearInterval(timerId);
+    timerId = null;
+    started = false;
+    over = true;
+    startEl.innerHTML = "Restart";
+    document.removeEventListener("keyup", control);
   }
 }
 
-
+function resetGame() {
+  for (let i = 0; i < 200; i++) {
+    squares[i].classList.remove("tetromino", "taken");
+    squares[i].style.backgroundColor = "transparent";
+  }
+  for (let i = 0; i < 20; i++) {
+    displaySquares[i].classList.remove("tetromino");
+    displaySquares[i].style.backgroundColor = "transparent";
+  }
+  score = 0;
+  scoreEl.innerHTML = score;
+}
 
 function createEl(el, txt, prnt, cls) {
   var newEl = document.createElement(el);
