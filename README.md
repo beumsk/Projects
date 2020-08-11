@@ -17,7 +17,6 @@ To reach Github versions:
     <li><a href="https://beumsk.github.io/Projects/higher-or-lower" target="_blank">Higher or Lower</a></li>
     <li><a href="https://beumsk.github.io/Projects/javascript-calculator" target="_blank">Javascript Calculator</a></li>
     <li><a href="https://beumsk.github.io/Projects/javascript-clock" target="_blank">Javascript Clock</a></li>
-    <li><a href="https://beumsk.github.io/Projects/loader" target="_blank">Loader</a></li>
     <li><a href="https://beumsk.github.io/Projects/memory" target="_blank">Memory</a></li>
     <li><a href="https://beumsk.github.io/Projects/minesweeper" target="_blank">Minesweeper</a></li>
     <li><a href="https://beumsk.github.io/Projects/pokemon" target="_blank">Pokemon</a></li>
