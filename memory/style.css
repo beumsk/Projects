@@ -19,16 +19,18 @@ body {
 
 /* HEADER */
 header {
-  color: whitesmoke;
-  letter-spacing: 0.4em;
+  color: white;
+  letter-spacing: 10px;
   font-size: 22px;
   padding: 10px 5px;
 }
+
 @media only screen and (min-width: 768px) {
   header {
     font-size: 28px;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   header {
     font-size: 32px;
@@ -38,18 +40,24 @@ header {
 
 /* main SECTION */
 .main {
-  background: whitesmoke;
+  background: white;
   width: 250px;
   height: 345px;
-  box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
+/*   box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4); */
   margin: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
 @media only screen and (min-width: 768px) {
   .main {
     width: 310px;
     height: 285px;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .main {
     width: 410px;
@@ -58,25 +66,25 @@ header {
 }
 
 .box {
-  background: #9b59b6;
-  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background: #6186aa;
+/*   background-image: linear-gradient(to top left, #9b59b6, #1abc9c); */
   background-size: 250%;
   width: 50px;
   height: 50px;
   float: left;
   margin: 10px 0 0 10px;
-  cursor: pointer;
 }
+
 @media only screen and (min-width: 1024px) {
   .box {
     width: 70px;
     height: 70px;
   }
 }
+
 .play:hover {
-  background: #2ecc71;
-  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
-  background-size: 100%;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 img {
@@ -86,22 +94,24 @@ img {
 
 /* STATUS bar */
 #state {
-  background: #9b59b6;
-  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background: #6186aa;
+/*   background-image: linear-gradient(to top left, #9b59b6, #1abc9c); */
   background-size: 250%;
   width: 230px;
   line-height: 25px;
   float: left;
   margin: 10px 0 0 10px;
   padding: 0 10px;
-  color: whitesmoke;
+  color: white;
   font-size: 16px;
 }
+
 @media only screen and (min-width: 768px) {
   #state {
     width: 290px;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   #state {
     width: 390px;
@@ -112,6 +122,7 @@ img {
 #time {
   float: left;
 }
+
 #time::after {
   content: " sec";
 }
@@ -119,35 +130,40 @@ img {
 #score {
   float: right;
 }
+
 #score::after {
   content: " points";
 }
 
 /* FOOTER */
 footer p {
-  color: whitesmoke;
+  color: white;
   padding: 5px;
   font-size: 14px;
-  clear: both;
+  letter-spacing: 1px;
 }
 
 footer p a {
-  color: #333;
+  color: #ddd;
   text-decoration: none;
 }
+
 footer p a:hover {
-  color: whitesmoke;
+  color: white;
   text-decoration: underline;
 }
 
 .hidden {
   display: none !important;
 }
+
 .show {
   display: block;
 }
+
 .outlined {
   outline: solid 2px #34495e;
+  background: #9b59b6;
 }
 
 /* PRE modal window */
@@ -164,31 +180,32 @@ footer p a:hover {
   background: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
 #themes {
   margin: auto;
-  padding: 25px 20px;
+  padding: 20px;
   width: 250px;
-  background: whitesmoke;
-  color: #36a7a2;
-  font-weight: bold;
-  letter-spacing: .05em;
-  border-radius: 2px;
+  background: white;
+  color: #6186aa;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
 #themes p {
-  margin: 10px auto;
-  padding: 5px 40px;
-  border: solid #36a7a2 1px;
-  border-radius: 2px;
-  background: whitesmoke;
-  color: #36a7a2;
+  margin-top: 10px;
+  padding: 5px 20px;
+  border: solid 1px;
+  background: white;
+  color: #6186aa;
   cursor: pointer;
-  font-weight: normal;
+  font-size: 16px;
 }
+
 #themes p:hover {
-  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background: #6186aa;
+/*   background-image: linear-gradient(to top left, #9b59b6, #1abc9c); */
   background-size: 250%;
-  color: whitesmoke;
+  color: white;
 }
 
 /* POST modal window */
@@ -209,31 +226,31 @@ footer p a:hover {
 #post > div {
   width: 300px;
   padding: 20px 0 40px;
-  background: whitesmoke;
-  color: #36a7a2;
-  border-radius: 2px;
+  background: white;
+  color: #6186aa;
 }
 
-#post p:first-child, #post #final {
+#post p:first-child, 
+#post #final {
   font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
   margin: auto;
   padding: 10px 20px;
 }
 
 #post #again {
-  color: #36a7a2;
+  color: #6186aa;
   text-decoration: none;
   margin: auto;
   padding: 10px 20px;
   width: 160px;
-  border: solid #36a7a2 1px;
-  border-radius: 2px;
+  border: solid 1px;
 }
+
 #post #again:hover {
-  background: #27ae60;
-  background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+  background: #6186aa;
+/*   background-image: linear-gradient(to top left, #9b59b6, #1abc9c); */
   background-size: 250%;
-  color: whitesmoke;
+  color: white;
   cursor: pointer;
 }
