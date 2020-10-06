@@ -11,6 +11,8 @@ var words = {
   w6: ["yellow", "pencil", "finger", "street", "jacket", "rabbit", "monkey", "cookie", "banana", "potato", "orange", "carrot", "tomato", "cheese", "pepper", "letter", "cisors", "wallet", "bottle", "coffee", "laptop", "screen", "garden", "toilet"],
   w7: ["morning", "sweater", "coconut", "ketchup", "mostard", "chicken", "country", "kitchen"],
   w8: ["elephant", "zucchini", "eggplant", "computer", "keyboard", "bathroom", "basement"],
+  w9: ["aardvarks", "alligator", "boulevard", "hamburger", "turquoise", "telephone", "furniture", "checklist", "container", "professor", "frequency", "spaceship", "scarecrow", "deodorant", "cranberry"],
+  w10: ["department", "watermelon", "strawberrry", "skateboard", "rainforest", "helicopter", "percentage", "restaurant", "microscope", "vegetables", "university", "volleyball", "toothbrush", "laboratory", "calculator", "wheelchair", "chandelier", "blackberry", "binoculars"],
   all: []
 };
 
