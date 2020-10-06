@@ -16,7 +16,7 @@ var words = {
   all: []
 };
 
-words.all = words.w3.concat(words.w4, words.w5, words.w6, words.w7, words.w8);
+words.all = words.w3.concat(words.w4, words.w5, words.w6, words.w7, words.w8, words.w9, words.w10);
 
 getRandomWord();
 
@@ -25,15 +25,15 @@ function getRandomWord() {
   $(".word").html("");
   console.log(randomWord);
   var randomWordSplitted = randomWord.split("");
-  randomWordSplitted.forEach(function(x){
-    $(".word").append("<span class='"+x+"'>"+x+"</span>");
+  randomWordSplitted.forEach(function (x) {
+    $(".word").append("<span class='" + x + "'>" + x + "</span>");
   });
 
-  $(".alphabet span").on("click", function() {
+  $(".alphabet span").on("click", function () {
     var letter = $(this).text();
-    if(checkLetter(letter, randomWordSplitted)) {
+    if (checkLetter(letter, randomWordSplitted)) {
       $(this).addClass("green");
-      $("."+letter).addClass("found");
+      $("." + letter).addClass("found");
 
       if (checkWin(randomWordSplitted.length)) {
         $(".alphabet").fadeOut();
@@ -49,18 +49,18 @@ function getRandomWord() {
   });
 }
 
-$("button").on("click", function() {
+$("button").on("click", function () {
   gameReset();
 });
 
 function checkWin(length) {
-  if($(".found").length === length) {
+  if ($(".found").length === length) {
     return true;
   }
 }
 
 function checkLetter(letter, arr) {
-  if(arr.indexOf(letter) !== -1) {
+  if (arr.indexOf(letter) !== -1) {
     return true;
   }
   else {
@@ -68,7 +68,7 @@ function checkLetter(letter, arr) {
   }
 }
 
-function gameReset() {  
+function gameReset() {
   $(".alphabet span").off().removeClass();
   $(".word span").removeClass("found");
   $(".alphabet, .word").fadeIn();
