@@ -9,8 +9,8 @@ var words = {
   w4: ["boat", "ball", "blue", "rose", "hero", "city", "shoe", "hand", "sock", "head", "back", "foot", "bear", "beer", "duck", "lion", "wine", "milk", "meat", "rice", "kiwi", "peer", "salt", "fish", "rock", "bike", "book", "fire", "tree"],
   w5: ["green", "black", "white", "house", "world", "space", "earth", "night", "shirt", "boxer", "scarf", "glove", "sheep", "snake", "horse", "water", "juice", "pasta", "apple", "mango", "melon", "salad", "candy", "bread", "ruler", "phone", "paper", "plane", "train", "mouse", "chair"],
   w6: ["yellow", "pencil", "finger", "street", "jacket", "rabbit", "monkey", "cookie", "banana", "potato", "orange", "carrot", "tomato", "cheese", "pepper", "letter", "cisors", "wallet", "bottle", "coffee", "laptop", "screen", "garden", "toilet"],
-  w7: ["morning", "sweater", "coconut", "ketchup", "mostard", "chicken", "country", "kitchen"],
-  w8: ["elephant", "zucchini", "eggplant", "computer", "keyboard", "bathroom", "basement"],
+  w7: ["morning", "sweater", "coconut", "ketchup", "mostard", "chicken", "country", "kitchen", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",],
+  w8: ["elephant", "zucchini", "eggplant", "computer", "keyboard", "bathroom", "basement", "January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",],
   all: []
 };
 
